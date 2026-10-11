@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -12,9 +13,11 @@ class UserController extends Controller
      */
     public function index()
     {
+        $currentUser = User::find(session('user_id'))->username; 
         $users = User::all();
         return view('users' , [
-            'users' => $users
+            'users' => $users,
+            'currentUser_name' => $currentUser
         ]);
     }
 
@@ -65,6 +68,24 @@ class UserController extends Controller
             'users' => $users,
             'editUser' => $editUser
         ]);
+    }
+
+    public function showlogin(){
+        return view('login');
+    }
+
+    public function login(Request $request){
+    
+        $user = User::where('username', $request->username)->first();
+
+        if ($user && Hash::check($request->password, $user->password)) {
+
+            $request->session()->put('user_id', $user->id);
+
+            return redirect('users');
+        }
+
+        return redirect()->back();
     }
 
     /**

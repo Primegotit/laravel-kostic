@@ -29,7 +29,7 @@
             </div>
 
         <div>
-            <a href="inventory_management.html"><i class="fa-solid fa-bars text-2xl text-white cursor-pointer transition-all duration-300  hover:text-gray-900"></i></a>
+            <a href="#" class="text-white font-bold">Welcome {{ $currentUser_name }}</a>
         </div>
     
     </header>
@@ -183,7 +183,7 @@
 
         <div class="p-4 border border-orange-400 rounded-lg shadow-lg bg-white">
 
-            <form action="/insert" method="POST" class="flex flex-col gap-4  " >
+            <form action="/users/insert" method="POST" class="flex flex-col gap-4  " >
                 @csrf 
                 <div class="flex flex-col  items-center gap-3">
                     <!-- <img src="images/logo1.png" alt="" class="h-40 "> -->
