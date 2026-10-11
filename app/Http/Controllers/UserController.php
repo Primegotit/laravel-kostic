@@ -13,7 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $currentUser = User::find(session('user_id'))->username; 
+        $currentUser = User::find(session('user_id'))->username ?? 'User'; 
         $users = User::all();
         return view('users' , [
             'users' => $users,
@@ -40,9 +40,10 @@ class UserController extends Controller
         $user->gender = $request->gender;
         $user->year_of_birth = $request->year_of_birth;
         $user->address = $request->address;
+        $user->role = $request->role;
+
         $user->email_address = $request->email_address;
         $user->phone_number = $request->phone_number;
-        $user->role = $request->role;
         $user->username = $request->username;
         $user->password = bcrypt($request->password);
         $user->save();
@@ -74,6 +75,26 @@ class UserController extends Controller
         return view('login');
     }
 
+    public function showregister(){
+        return view('register');
+    }
+
+    public function register(Request $request){
+        $user = new User;
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->gender = $request->gender;
+        $user->year_of_birth = $request->year_of_birth;
+        $user->address = $request->address;
+        $user->role = $request->role;
+        $user->email_address = $request->email_address;
+        $user->phone_number = $request->phone_number;
+        $user->username = $request->username;
+        $user->password = bcrypt($request->password);
+        $user->save();
+        return redirect('/');
+    }
+    
     public function login(Request $request){
     
         $user = User::where('username', $request->username)->first();
@@ -100,9 +121,10 @@ class UserController extends Controller
             $user->gender = $request->gender;
             $user->year_of_birth = $request->year_of_birth;
             $user->address = $request->address;
+            $user->role = $request->role;
+
             $user->email_address = $request->email_address;
             $user->phone_number = $request->phone_number;
-            $user->role = $request->role;
             $user->username = $request->username;
             $user->password = bcrypt($request->password);
             $user->update();

@@ -50,7 +50,7 @@
                     </div>
 
                     <div>
-                        <a href="#" class="text-black text-md underline cursor-pointer transition duration-300 hover:text-gray-100   ">Forgot password?</a>
+                        <a href="/register" class="text-black text-md underline cursor-pointer transition duration-300 hover:text-gray-100   ">Forgot password?</a>
                     </div>
                 
                 </div>

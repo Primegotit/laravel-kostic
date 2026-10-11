@@ -29,7 +29,7 @@
             </div>
 
         <div>
-            <a href="#" class="text-white font-bold">Welcome {{ $currentUser_name }}</a>
+            <a href="#" class="text-white font-bold">Welcome {{ $currentUser_name ?? 'User' }}</a>
         </div>
     
     </header>
@@ -236,10 +236,8 @@
                 <div class="flex flex-col ">
                     <label for="">Role</label>
                     <select name="role" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100" value="{{ $editUser->role ?? ''}}">
-                        <option value="till_operator">Till Operator</option>
+                        <option value="customer">Customer</option>
                         <option value="manager">Manager</option>
-                        <option value="administrator">Administrator</option>
-                        <option value="data_capturer">Data capturer</option>
 
                     </select>
                 </div>
@@ -262,13 +260,13 @@
 
                 <div class="flex flex-row gap-3">
 
-                        <button type="submit" formaction="/insert" formmethod="POST" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-sm lg:text-md xl:text-md">Insert</button>
+                        <button type="submit" formaction="/users/insert" formmethod="POST" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-sm lg:text-md xl:text-md">Insert</button>
 
                         <button type="submit" formaction="/users/update/{{ $editUser->id ?? '' }}" formmethod="POST" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-sm lg:text-md xl:text-md">Update</button>
 
                         <button type="submit" formaction="/users/delete/{{ $editUser->id ?? '' }}" formmethod="POST" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-sm lg:text-md xl:text-md">Delete</button>
 
-                        <button type="submit" formaction="/" formmethod="GET" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-sm lg:text-md xl:text-md">Reset</button>
+                        <button type="submit" formaction="/users" formmethod="GET" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-sm lg:text-md xl:text-md">Reset</button>
 
                 </div>
 
