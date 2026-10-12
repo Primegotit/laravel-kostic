@@ -11,18 +11,20 @@
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
-            <link rel="stylesheet" href="{{asset('fontawesome/css/all.min.css')}}">
 
         @else
             <style>
             </style>
         @endif
+
+        <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
+
     </head>
 <body  class="bg-gray-200">
 
    <header class="w-full h-16 bg-[#f77f00]">
         <div class="flex flex-row gap-3 items-center justify-center p-3 ">
-            <img src="images/logo15.png" alt="" class="h-9 ">
+            <img src="logo15.png" alt="" class="h-9 ">
             <h3 class="text-white text-2xl font-bold">KOSTIC</h3>
         </div>
    </header>

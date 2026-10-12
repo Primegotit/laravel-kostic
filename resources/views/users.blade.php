@@ -11,21 +11,22 @@
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
-            <link rel="stylesheet" href="{{asset('fontawesome/css/all.min.css')}}>
 
         @else
             <style>
             </style>
         @endif
+
+        <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
     </head>
-<body class="bg-gray-200">
+<body class="bg-gray-200 ">
     <header class="w-full h-16 bg-[#f77f00] flex flex-row p-3  items-center justify-between">
         <div>
             <i class="fa-solid fa-arrow-left-long text-2xl cursor-pointer text-white transition-all duration-300  hover:text-gray-900"></i>
         </div>
 
             <div class="flex flex-row gap-3 items-center justify-center p-3 ">
-                <img src="images/logo15.png" alt="" class="h-9 ">
+                <img src="logo15.png" alt="" class="h-9 ">
                 <h3 class="text-white lg:text-xl sm:text-sm font-bold">User management</h3>
             </div>
 
