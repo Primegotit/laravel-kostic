@@ -81,6 +81,10 @@ class UserController extends Controller
         return view('register');
     }
 
+    public function showOnlinePurchase(){
+        return view('online_purchase');
+    }
+
     public function register(Request $request){
 
         $request->validate([
