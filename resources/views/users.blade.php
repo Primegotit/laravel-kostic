@@ -252,12 +252,6 @@
                     <input type="text" name="password" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100" value="{{ $editUser->password ?? '' }}">
                 </div>
 
-                <div class="flex flex-col ">
-                    <label for="">Confirm Password</label>
-                    <input type="text" name="confirm_password" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
-                </div>
-
-
                 <div class="flex flex-row gap-3">
 
                         <button type="submit" formaction="/users/insert" formmethod="POST" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-sm lg:text-md xl:text-md">Insert</button>

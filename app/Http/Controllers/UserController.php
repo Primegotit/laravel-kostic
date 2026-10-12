@@ -13,7 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $currentUser = User::find(session('user_id'))->username ?? 'User'; 
+        $currentUser = User::find(session('user_id'))->username ?? 'Unknown'; 
         $users = User::all();
         return view('users' , [
             'users' => $users,
@@ -64,10 +64,12 @@ class UserController extends Controller
     public function edit(int $id)
     {
         $users = User::all();
+        $currentUser = User::find(session('user_id'))->username ?? 'Unknown'; 
         $editUser = User::find($id);
         return view('users' , [
             'users' => $users,
-            'editUser' => $editUser
+            'editUser' => $editUser,
+            'currentUser_name' => $currentUser
         ]);
     }
 
@@ -80,6 +82,20 @@ class UserController extends Controller
     }
 
     public function register(Request $request){
+
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+            'email_address' => 'required|email',
+            'phone_number' => 'required',
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'gender' => 'required',
+            'year_of_birth' => 'required',
+            'address' => 'required',
+            'role' => 'required',
+        ]);
+
         $user = new User;
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
@@ -96,6 +112,11 @@ class UserController extends Controller
     }
     
     public function login(Request $request){
+
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
     
         $user = User::where('username', $request->username)->first();
 
@@ -104,6 +125,11 @@ class UserController extends Controller
             $request->session()->put('user_id', $user->id);
 
             return redirect('users');
+        }
+        else{
+            return back()->withErrors([
+                'errormessage' => 'Invalid username or password.',
+            ])->onlyInput('username');
         }
 
         return redirect()->back();

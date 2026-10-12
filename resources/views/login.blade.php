@@ -33,6 +33,9 @@
 
         <div class="w-11/12 md:w-7/12 lg:w-5/12  h-4/7 bg-[#f77f00] p-6 rounded-lg flex flex-col items-center gap-2 shadow-lg " id="login-container">
             <h3 class="text-white  font-bold  ">Enter your login details</h3>
+            @error('errormessage')
+                <p class="text-black text-sm bg-red-700 p-2 ">{{ $message }}</p>
+            @enderror
             <form action="/users/login" method="POST" class="w-full flex flex-col gap-6 h-full  p-2 justify-start ">
                 @csrf
                 <div class="flex flex-col justfiy-center items-center ">
@@ -43,10 +46,16 @@
                     <div class="flex flex-col gap-1">
                         <label for="" class="text-white font-bold">Username</label>
                         <input type="text" placeholder="Enter your username" class="p-1 rounded-lg bg-white" name="username" >
+                        @error('username')
+                            <span class="text-black text-xs">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="flex flex-col gap-1">
                         <label for="" class="text-white font-bold">Password</label>
                         <input type="password" name="password" placeholder="Enter your password" class="p-1 rounded-lg bg-white" >
+                        @error('password')
+                            <span class="text-black text-xs">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div>

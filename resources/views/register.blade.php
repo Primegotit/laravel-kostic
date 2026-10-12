@@ -48,11 +48,17 @@
                         <div class="flex flex-col gap-1">
                             <label class="text-white font-semibold text-xs">First Name</label>
                             <input type="text" placeholder="First name" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black" name="first_name">
+                            @error('first_name')
+                                <span class="text-black text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <div class="flex flex-col gap-1">
                             <label class="text-white font-semibold text-xs">Last Name</label>
                             <input type="text" placeholder="Last name" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black" name="last_name">
+                            @error('last_name')
+                                <span class="text-black text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
@@ -61,11 +67,17 @@
                         <div class="flex flex-col gap-1">
                             <label class="text-white font-semibold text-xs">Username</label>
                             <input type="text" placeholder="First name" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black" name="username">
+                            @error('username')
+                                <span class="text-black text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <div class="flex flex-col gap-1">
                             <label class="text-white font-semibold text-xs">Password</label>
                             <input type="text" placeholder="Last name" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black" name="password">
+                            @error('password')
+                                <span class="text-black text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
@@ -78,11 +90,17 @@
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
+                            @error('gender')
+                                <span class="text-black text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <div class="flex flex-col gap-1">
                             <label class="text-white font-semibold text-xs">Date of Birth</label>
                             <input type="text" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black" name="year_of_birth">
+                            @error('year_of_birth')
+                                <span class="text-black text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
@@ -91,11 +109,17 @@
                         <div class="flex flex-col gap-1">
                             <label class="text-white font-semibold text-xs">Phone Number</label>
                             <input type="tel" placeholder="Enter phone number" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black" name="phone_number">
+                            @error('phone_number')
+                                <span class="text-black text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <div class="flex flex-col gap-1">
                             <label class="text-white font-semibold text-xs">Email Address</label>
                             <input type="email" placeholder="Enter email address" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black" name="email_address">
+                            @error('email_address')
+                                <span class="text-black text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
@@ -106,11 +130,17 @@
                             <select class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black" name="role">
                                 <option value="customer">Customer</option>
                             </select>
+                            @error('role')
+                                <span class="text-black text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <div class="flex flex-col gap-1">
                             <label class="text-white font-semibold text-xs">Address</label>
                             <input type="text" placeholder="Enter street address" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black" name="address">
+                            @error('address')
+                                <span class="text-black text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
