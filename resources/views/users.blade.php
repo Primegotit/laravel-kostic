@@ -48,7 +48,7 @@
                 </div>
 
                 <div>
-                    <a href="/online_purchase" class="bg-[#2e2e2e] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105  text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Audit logging system <i class="fa-solid fa-clock-rotate-left text-md text-white  "></i></a>
+                    <a href="/products" class="bg-[#2e2e2e] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105  text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Audit logging system <i class="fa-solid fa-clock-rotate-left text-md text-white  "></i></a>
 
                 </div>
                 
