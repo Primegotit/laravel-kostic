@@ -275,17 +275,11 @@
                                     <span class="flex items-center gap-1 text-emerald-600 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>In Stock</span>
                                 </div>
                                 <h3 class="font-bold text-gray-900 text-base leading-snug group-hover:text-[#f77f00] transition-colors truncate" title="Moxom Mechanical Keyboard">Moxom Mechanical Keyboard</h3>
-                                <ul class="flex flex-wrap gap-1 text-[11px] text-gray-600 mb-2 mt-3">
+                                <ul class="flex flex-wrap gap-1 text-[11px] text-gray-600 mb-1 mt-3">
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Red switch</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Size 5</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">4hr battery</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Color:</span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-red-500 ring-2 ring-offset-1 ring-red-400 cursor-pointer"></span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-gray-900 ring-1 ring-gray-300 cursor-pointer"></span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-blue-600 ring-1 ring-gray-300 cursor-pointer"></span>
-                                </div>
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
@@ -329,10 +323,7 @@
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">512GB SSD</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Core i7</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Power:</span>
-                                    <span class="px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 font-medium text-[10px]">65W USB-C PD</span>
-                                </div>
+
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
@@ -376,12 +367,7 @@
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">40hr battery</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Hi-Res Audio</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Color:</span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-black ring-2 ring-offset-1 ring-gray-600 cursor-pointer"></span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-blue-900 ring-1 ring-gray-300 cursor-pointer"></span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-stone-200 ring-1 ring-gray-300 cursor-pointer"></span>
-                                </div>
+
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
@@ -425,10 +411,7 @@
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Silent click</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Type-C charge</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Type:</span>
-                                    <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-medium text-[10px]">Ergonomic 2.4G/BT</span>
-                                </div>
+
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
@@ -472,10 +455,7 @@
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Hyaluronic Acid</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Organic</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Type:</span>
-                                    <span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-medium text-[10px]">All skin types</span>
-                                </div>
+
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
@@ -519,10 +499,7 @@
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">3 Heat speeds</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Diffuser incl.</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Power:</span>
-                                    <span class="px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 font-medium text-[10px]">2200W Ionic AC</span>
-                                </div>
+
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
@@ -566,12 +543,7 @@
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Oversized</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Unisex</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Color:</span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-stone-700 ring-2 ring-offset-1 ring-stone-400 cursor-pointer"></span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-amber-100 border border-gray-300 ring-1 ring-gray-300 cursor-pointer"></span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-emerald-800 ring-1 ring-gray-300 cursor-pointer"></span>
-                                </div>
+
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
@@ -615,10 +587,7 @@
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">180 Memories</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">FDA Certified</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Power:</span>
-                                    <span class="px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 font-medium text-[10px]">USB-C + 4x AAA</span>
-                                </div>
+
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
@@ -662,10 +631,7 @@
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Tilt Sensor</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Type-C Fast</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Type:</span>
-                                    <span class="px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 font-medium text-[10px]">Universal Capacitive</span>
-                                </div>
+
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
@@ -709,10 +675,7 @@
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Dual Port</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Foldable pin</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Power:</span>
-                                    <span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-medium text-[10px]">65W GaN Dual Fast</span>
-                                </div>
+
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
@@ -756,12 +719,7 @@
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Anti-Slip</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Ultralight</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Color:</span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-blue-600 ring-2 ring-offset-1 ring-blue-400 cursor-pointer"></span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-red-600 ring-1 ring-gray-300 cursor-pointer"></span>
-                                    <span class="w-3.5 h-3.5 rounded-full bg-zinc-900 ring-1 ring-gray-300 cursor-pointer"></span>
-                                </div>
+
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
@@ -805,10 +763,7 @@
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Privacy Cover</li>
                                     <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Autofocus</li>
                                 </ul>
-                                <div class="flex items-center gap-1.5 text-[11px] mt-4">
-                                    <span class="text-gray-400">Type:</span>
-                                    <span class="px-2 py-0.5 rounded-full bg-purple-50 text-purple-700 font-medium text-[10px]">Plug &amp; Play USB</span>
-                                </div>
+
                             </div>
                             <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
                                 <div>
