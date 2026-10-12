@@ -276,9 +276,14 @@
                                 </div>
                                 <h3 class="font-bold text-gray-900 text-base leading-snug group-hover:text-[#f77f00] transition-colors truncate" title="Pro Ultra-Slim Laptop 15.6">{{ $product->name }}</h3>
                                 <ul class="flex flex-wrap gap-1 text-[11px] text-gray-600 mb-2 mt-3">
-                                    <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">16GB RAM</li>
-                                    <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">512GB SSD</li>
-                                    <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">Core i7</li>
+                                    @php
+                                        
+                                        $tags = array_map('trim', explode(",", $product->tags));
+                                        
+                                    @endphp
+                                    @foreach ($tags as $tag)
+                                        <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">{{ $tag }}</li>
+                                    @endforeach
                                 </ul>
 
                             </div>
