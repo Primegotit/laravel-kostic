@@ -29,7 +29,7 @@
             </div>
 
         <div class="flex flex-row gap-2 items-center justify-end">
-            <p class="text-white font-bold hidden sm:block">{{ $currentUser->username ?? "" }}</p>
+            <p class="text-white font-bold hidden sm:block">{{ $currentUser->first_name ?? "" }}</p>
             <div>
                 <button type="button" id="profile-view" class="relative block focus:outline-none rounded-full cursor-pointer transition duration-300 hover:scale-105 active:scale-95 focus:ring-2 focus:ring-white/80" aria-label="Toggle profile menu" aria-expanded="false">
                     <img src="whatsapp2.png" alt="Profile" class="h-11 w-11 rounded-full object-cover bg-gray-700 border-2 border-white shadow-sm">
@@ -121,7 +121,7 @@
             <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.146),rgba(0, 0, 0, 0.531)) ,url('shop9.jpg')" class=" p-4  bg-black/70 relative h-96 bg-cover bg-[position:50%_20%]  px-3 py-3  rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row   gap-2 ">
                 <div class="relative flex justify-between p-2 items-end h-full ">
                     <div class="  ">
-                    <h2 class="text-gray-300 text-2xl md:text-5xl font-extrabold">KOSTIC</h2>
+                    <h2 class="text-gray-100 text-shadow-lg text-shadow-gray-800 text-2xl md:text-5xl font-extrabold">KOSTIC</h2>
                     <p class="text-orange-400 text-base md:text-2xl">Make a purchase online</p>
                     </div>
                     <img src="logo7.png" alt="" class="h-12 md:h-20  opacity-90">
@@ -183,17 +183,13 @@
 
                 <div class="flex flex-row flex-wrap gap-6 justify-center lg:justify-start py-4 rounded-lg bg-white p-4 border border-[#f77f00]">
 
-                    <div class="w-full flex flex-row items-center gap-4  shadow-lg p-4 flex-wrap ">
+                    <div class="w-full flex flex-row items-center gap-4  shadow-lg rounded-lg p-4 flex-wrap ">
                         <p class="md:text-lg text-md font-bold">Filter</p>
                         <ul class="flex flex-row gap-2 justify-start lg:justify-between  items-center flex-wrap text-xs">
-                            <li class="transition duration-300 hover:scale-105 "><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white font-bold px-5 py-1 rounded-full  ">All</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Electronics</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Clothing</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Skincare</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Healthcare</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Academic</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Hair products</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Accessories</a></li>
+                            <li class="transition duration-300 hover:scale-105 "><a href=""class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white font-bold px-5 py-1 rounded-full  ">All</a></li>
+                            @foreach ($categories as $category)
+                                <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">{{ $category ?? "" }}</a></li>       
+                            @endforeach
                         </ul>
                     </div>
 

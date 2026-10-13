@@ -15,9 +15,11 @@ class ProductController extends Controller
     {
         $currentUser = User::find(session('user_id')) ; 
         $products = Product::all();
+        $categories = Product::distinct()->pluck('category');
         return view('online_purchase', [
             'products' => $products,
-            'currentUser' => $currentUser
+            'currentUser' => $currentUser,
+            'categories' => $categories
         ]);
     }
 
