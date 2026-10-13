@@ -118,6 +118,7 @@
 
         <div class=" text-sm overflow-auto  flex flex-col gap-4  shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3 ">
             
+
             <div class=" px-3 py-3  rounded-lg shadow-lg bg-white flex md:flex-col flex-col lg:flex-row   gap-2">
 
                 <div class=" w-full  bg-white rounded-md border  border-[#f77f00] p-4 ">
@@ -130,18 +131,18 @@
 
                     <div class="bg-[#f77f00]  h-[1px] mt-1"></div>
 
-                    <div class="flex flex-row justify-start gap-6 mt-2 py-1  flex-wrap mb-1">
+                    <div class="flex flex-row justify-start gap-5 mt-2 py-1  flex-wrap mb-1">
 
-                        <div class="flex flex-row justify-start gap-6 ">
-                            <div>
+                        <div class="flex flex-row justify-start gap-2 0 ">
+                            <div class="">
                                 <label for="">Search for</label>
-                                <input type="text" name="" id="" class="p-1 border border-orange-400 bg-gray-100 rounded-lg w-5/6">
+                                <input type="text" name="" id="" class="p-1 border border-orange-400 bg-gray-100 rounded-lg w-full">
                             </div>
 
 
-                            <div>
+                            <div class="">
                                 <label for="">Search by</label>
-                                <select name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100 w-[99%]">
+                                <select name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100 w-full">
                                     <option value="">Select...</option>
                                     <option value="">Product ID</option>
                                     <option value="">Product Name</option>
@@ -163,98 +164,26 @@
                         
                     </div>
                 </div>
-
-                <div class=" w-full h-auto  flex flex-row gap-2 justify-start flex-wrap lg:flex-nowrap ">
-                    <div class="lg:w-11/12 w-full  flex flex-row flex-wrap gap-6 bg-white rounded-md border border-[#f77f00] justify-start p-4 items-center">
-
-                        <div class=" h-auto w-auto">
-                            <p class="font-bold md:text-lg text-md">Cart items</p>
-                            <!-- <p class="md:text-lg text-md font-bold text-center border border-[#f77f00] rounded-md  p-6 shadow-lg">23</p> -->
-                                <div class="border border-[#f77f00] rounded-md  p-3 shadow-lg ">
-                                    <p class="md:text-lg text-md font-bold text-center ">X</p>
-                                    <p class="md:text-lg text-md  text-center ">23</p>
-
-                                </div>
-                        </div>
-
-                        <div class="h-auto w-auto">
-
-                            <p class="font-bold md:text-lg text-md  ">Total price</p>
-
-                            <div class=" flex flex-row  flex-wrap gap-3">
-                                <div class="border border-[#f77f00] rounded-md  p-3 shadow-lg ">
-                                    <p class="md:text-lg text-xs font-bold text-center ">USD</p>
-                                    <p class="md:text-lg text-xs  text-center ">$103.00</p>
-
-                                </div>
-
-                                <div class="border border-[#f77f00] rounded-md  p-3 shadow-lg">
-                                    <p class="md:text-lg text-xs font-bold text-center ">ZAR</p>
-                                    <p class="md:text-lg text-xs  text-center ">4036.00 R</p>
-
-                                </div>
-
-                                <div class="border border-[#f77f00] rounded-md  p-3 shadow-lg">
-                                    <p class="md:text-lg text-xs font-bold text-center ">ZIG</p>
-                                    <p class="md:text-lg text-xs text-center ">4036.00 ZIG</p>
-
-                                </div>
-                            </div>
-                            
-
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="flex flex-row h-24 lg:h-auto flex-wrap w-full md:w-full lg:w-1/3  gap-3 ">
-                        <a href="#" class="bg-[#0042f7] text-white px-3 h-auto  w-32 rounded-lg shadow-lg cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md">View cart<i class="fa-solid fa-magnifying-glass text-md text-white  "></i></a>
-                        <a href="#" class="bg-[#f77f00] text-white px-3 h-auto  w-32 rounded-lg shadow-lg cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Search <i class="fa-solid fa-magnifying-glass text-md text-white  "></i></a>
-
-                    </div>
-
-                </div>
-    
-            
-
             </div>
-
-
             <!-- this is for the table container -->
-            <div class="rounded-lg shadow-lg bg-white p-3 flex flex-col gap-4">
+            <div class="rounded-lg shadow-lg bg-white  p-3 flex flex-col gap-4">
 
-                <div class="rounded-md border  border-[#f77f00] p-4 flex flex-col gap-4">
 
-                    <div class="w-full " >
-                        <h3 class=" text-black md:text-lg text-md font-bold">Product list</h3>
-                        <div class="w-full h-1  bg-[#f77f00] rounded-lg"></div>
-                    </div>
-
-                    <div class="w-full flex flex-row gap-4 items-end shadow-lg p-4 flex-wrap">
-                        <h2 class="text-md  ">Select the view type</h2>
-                        <div class="flex flex-row justify-start items-center gap-3">
-                            <a href="#" class="bg-[#f77f00] text-white px-3  h-8 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Tiles<i class="fa-solid fa-magnifying-glass text-md text-white  "></i></a>
-                            <a href="#" class="bg-[#f77f00] text-white px-3  h-8 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Table<i class="fa-solid fa-magnifying-glass text-md text-white  "></i></a>
-
-                        </div>
-                        
-                    </div>
-
-                </div>
 
 
                 <div class="flex flex-row flex-wrap gap-6 justify-center lg:justify-start py-4 rounded-lg bg-white p-4 border border-[#f77f00]">
 
                     <div class="w-full flex flex-row items-center gap-4  shadow-lg p-4 flex-wrap ">
                         <p class="md:text-lg text-md font-bold">Filter</p>
-                        <ul class="flex flex-row gap-4 justify-start lg:justify-between  items-center flex-wrap text-xs">
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] font-bold px-5 py-1 rounded-full  ">All</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00]  px-5 py-1 rounded-full">Electronics</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00]  px-5 py-1 rounded-full">Clothing</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00]  px-5 py-1 rounded-full">Skincare</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00]  px-5 py-1 rounded-full">Healthcare</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00]  px-5 py-1 rounded-full">Academic</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00]  px-5 py-1 rounded-full">Hair products</a></li>
-                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00]  px-5 py-1 rounded-full">Accessories</a></li>
+                        <ul class="flex flex-row gap-2 justify-start lg:justify-between  items-center flex-wrap text-xs">
+                            <li class="transition duration-300 hover:scale-105 "><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white font-bold px-5 py-1 rounded-full  ">All</a></li>
+                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Electronics</a></li>
+                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Clothing</a></li>
+                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Skincare</a></li>
+                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Healthcare</a></li>
+                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Academic</a></li>
+                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Hair products</a></li>
+                            <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Accessories</a></li>
                         </ul>
                     </div>
 <!-- Change all the other tiles to be the same as tile 1 such that they don't have the rating feature for now *********VERY IMPORTANT************ -->
@@ -318,9 +247,10 @@
             </div>
 
 
+            </div>
+
+
         </div>
-
-
 
 
     </main>
