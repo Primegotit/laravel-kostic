@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -12,9 +13,11 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $currentUser = User::find(session('user_id')) ; 
         $products = Product::all();
         return view('online_purchase', [
-            'products' => $products
+            'products' => $products,
+            'currentUser' => $currentUser
         ]);
     }
 

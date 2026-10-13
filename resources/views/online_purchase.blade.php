@@ -29,7 +29,7 @@
             </div>
 
         <div class="flex flex-row gap-2 items-center justify-end">
-            <p class="text-white font-bold hidden sm:block">Promise</p>
+            <p class="text-white font-bold hidden sm:block">{{ $currentUser->username ?? "" }}</p>
             <div>
                 <button type="button" id="profile-view" class="relative block focus:outline-none rounded-full cursor-pointer transition duration-300 hover:scale-105 active:scale-95 focus:ring-2 focus:ring-white/80" aria-label="Toggle profile menu" aria-expanded="false">
                     <img src="whatsapp2.png" alt="Profile" class="h-11 w-11 rounded-full object-cover bg-gray-700 border-2 border-white shadow-sm">
@@ -55,10 +55,11 @@
                 </div>
                 <div class="min-w-0 pr-4">
                     <div class="flex items-center gap-1.5">
-                        <h2 class="text-base font-bold truncate text-white leading-tight">Promise Siafwiyo</h2>
+
+                        <h2 class="text-base font-bold truncate text-white leading-tight">{{ ($currentUser->first_name ?? "" ) . " " . ($currentUser->last_name ?? "") }}</h2>
                         <i class="fa-solid fa-circle-check text-xs text-white" title="Verified Account"></i>
                     </div>
-                    <p class="text-xs text-orange-100 truncate mt-0.5">primevaldigitals@gmail.com</p>
+                    <p class="text-xs text-orange-100 truncate mt-0.5">{{ $currentUser->email_address ?? "" }}</p>
                     <span class="inline-flex items-center gap-1 mt-1.5 px-2 py-0.5 bg-white/20 backdrop-blur-sm text-white text-[11px] font-medium rounded-full">
                         <i class="fa-solid fa-shield-halved text-[10px]"></i> Verified Member
                     </span>
@@ -73,7 +74,8 @@
                 <span class="flex items-center gap-2 text-gray-500 font-medium">
                     <i class="fa-regular fa-calendar-check text-[#f77f00] text-sm w-4 text-center"></i> Joined on
                 </span>
-                <span class="font-semibold text-gray-800">22 February 2024</span>
+
+                <span class="font-semibold text-gray-800">{{ (date('d F Y', strtotime($currentUser->created_at))) ?? "" }}</span>
             </div>
 
             <!-- Stats Grid: Transactions & Points -->
