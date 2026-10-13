@@ -118,6 +118,16 @@
 
         <div class=" text-sm overflow-auto  flex flex-col gap-4  shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3 ">
             
+            <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.433),rgba(0, 0, 0, 0.531)) ,url('shop9.jpg')" class=" p-4  bg-black/70 relative h-96 bg-cover bg-[position:50%_20%]  px-3 py-3  rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row   gap-2 ">
+                <div class="relative flex justify-between p-2 items-end h-full ">
+                    <div class="  ">
+                    <h2 class="text-gray-300 text-2xl md:text-5xl font-extrabold">KOSTIC</h2>
+                    <p class="text-orange-400 text-base md:text-2xl">Make a purchase online</p>
+                    </div>
+                    <img src="logo15.png" alt="" class="h-12 md:h-20  opacity-90">
+                    
+                </div>
+            </div>
 
             <div class=" px-3 py-3  rounded-lg shadow-lg bg-white flex md:flex-col flex-col lg:flex-row   gap-2">
 
@@ -186,10 +196,9 @@
                             <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">Accessories</a></li>
                         </ul>
                     </div>
-<!-- Change all the other tiles to be the same as tile 1 such that they don't have the rating feature for now *********VERY IMPORTANT************ -->
 
-<!-- Tile 2 -->
-@foreach($products as $product)
+            <!-- Tile  -->
+            @foreach($products as $product)
 
                     <div class="group relative flex flex-col justify-between w-80 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="relative w-full h-48 bg-gray-50 overflow-hidden flex items-center justify-center">
@@ -237,9 +246,9 @@
                         </div>
                     </div>
 
-@endforeach
+            @endforeach
 
-<!-- Tile 2 -->
+            <!-- Tile  -->
 
 
                 </div>
