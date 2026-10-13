@@ -129,9 +129,9 @@
                 </div>
             </div>
 
-            <div class=" px-3 py-3  rounded-lg shadow-lg bg-white flex md:flex-col flex-col lg:flex-row   gap-2">
+            <div class=" px-3 py-3  rounded-lg shadow-lg bg-gray-100 flex md:flex-col flex-col lg:flex-row   gap-2">
 
-                <div class=" w-full  bg-white rounded-md border  border-[#f77f00] p-4 ">
+                <div class=" w-full  bg-gray-100 rounded-md border  border-[#f77f00] p-4 ">
                     <div class=" flex flex-row items-center justify-start  gap-1 ">
 
                         <h3 class="font-bold md:text-lg text-md">Search criteria</h3>
@@ -176,16 +176,23 @@
                 </div>
             </div>
             <!-- this is for the table container -->
-            <div class="rounded-lg shadow-lg bg-white  p-3 flex flex-col gap-4">
+            <div class="rounded-lg shadow-lg bg-gray-100 p-3 flex flex-col gap-4">
 
 
 
 
-                <div class="flex flex-row flex-wrap gap-6 justify-center lg:justify-center py-4 rounded-lg bg-white p-4 border border-[#f77f00]">
+                <div class="flex flex-row flex-wrap bg-gray-100 gap-6 justify-center lg:justify-center py-4 rounded-lg  p-4 border border-[#f77f00]">
 
                     <div class="w-full flex flex-row items-center gap-4  shadow-lg rounded-lg p-4 flex-wrap  bg-gray-200">
                         <p class="md:text-lg text-md font-bold">Filter</p>
-                        <ul class="flex flex-row gap-2 justify-start lg:justify-between  items-center flex-wrap text-xs">
+                        <select name="" id="" class="visible md:hidden p-1 border border-[#f77f00] rounded-lg bg-gray-200 w-full ">
+                            <option value="">All</option>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category ?? "" }}">{{ $category ?? "" }}</option>       
+                            @endforeach
+                        </select>
+                        
+                        <ul class=" hidden md:flex     flex-row gap-2 justify-start lg:justify-between  items-center flex-wrap text-xs">
                             <li class="transition duration-300 hover:scale-105 "><a href=""class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white font-bold px-5 py-1 rounded-full  ">All</a></li>
                             @foreach ($categories as $category)
                                 <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">{{ $category ?? "" }}</a></li>       
