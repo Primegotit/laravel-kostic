@@ -298,7 +298,7 @@
                                     <a href="#" title="Preview" class="w-8 h-8 rounded-lg border border-gray-200 text-gray-500 hover:text-[#f77f00] hover:border-[#f77f00] hover:bg-orange-50 flex items-center justify-center transition-colors">
                                         <i class="fa-regular fa-eye text-xs"></i>
                                     </a>
-                                    <a href="#" class="bg-[#f77f00] hover:bg-[#d96e00] active:scale-95 text-white px-3 h-8 rounded-lg text-xs font-semibold shadow-sm hover:shadow flex items-center gap-1.5 transition-all">
+                                    <a href="/products/add-to-cart/{{ $product->id }}" class="bg-[#f77f00] hover:bg-[#d96e00] active:scale-95 text-white px-3 h-8 rounded-lg text-xs font-semibold shadow-sm hover:shadow flex items-center gap-1.5 transition-all">
                                         <i class="fa-solid fa-cart-shopping text-xs"></i> Add
                                     </a>
                                 </div>

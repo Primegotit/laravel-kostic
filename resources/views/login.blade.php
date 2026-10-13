@@ -34,7 +34,7 @@
         <div id="popup-container" class="w-full h-full bg-[#f77f00]/30 backdrop-blur-sm hidden"></div>
 
 
-        <div class="w-11/12 md:w-7/12 lg:w-5/12  h-6/7 bg-[#f77f00] p-6 rounded-lg flex flex-col items-center gap-2 shadow-lg " id="login-container">
+        <div class="w-11/12 md:w-7/12 lg:w-5/12  sm:h-5/7 md:h-6/7 lg:h-6/7 xl:h-6/7 2xl:h-4/7 bg-[#f77f00] p-6 rounded-lg flex flex-col items-center gap-2 shadow-lg " id="login-container">
             <h3 class="text-white  font-bold  ">Enter your login details</h3>
             @error('errormessage')
                 <p class="text-black text-sm bg-red-700 p-2 ">{{ $message }}</p>
