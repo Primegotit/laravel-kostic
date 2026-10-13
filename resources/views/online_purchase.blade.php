@@ -181,9 +181,9 @@
 
 
 
-                <div class="flex flex-row flex-wrap gap-6 justify-center lg:justify-start py-4 rounded-lg bg-white p-4 border border-[#f77f00]">
+                <div class="flex flex-row flex-wrap gap-6 justify-center lg:justify-center py-4 rounded-lg bg-white p-4 border border-[#f77f00]">
 
-                    <div class="w-full flex flex-row items-center gap-4  shadow-lg rounded-lg p-4 flex-wrap ">
+                    <div class="w-full flex flex-row items-center gap-4  shadow-lg rounded-lg p-4 flex-wrap  bg-gray-200">
                         <p class="md:text-lg text-md font-bold">Filter</p>
                         <ul class="flex flex-row gap-2 justify-start lg:justify-between  items-center flex-wrap text-xs">
                             <li class="transition duration-300 hover:scale-105 "><a href=""class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white font-bold px-5 py-1 rounded-full  ">All</a></li>
