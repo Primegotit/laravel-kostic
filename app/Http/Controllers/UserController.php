@@ -74,8 +74,11 @@ class UserController extends Controller
     }
 
     public function showlogin(){
+
         return view('login');
     }
+
+
 
     public function showregister(){
         return view('register');
@@ -137,6 +140,15 @@ class UserController extends Controller
         }
 
         return redirect()->back();
+    }
+
+
+    public function logout()
+    {
+        session()->invalidate();
+        session()->regenerateToken();
+
+        return redirect('/');
     }
 
     /**

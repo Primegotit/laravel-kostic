@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',  [UserController::class, 'showlogin']);
 
+Route::get('/logout',  [UserController::class, 'logout']);
+
 Route::get('/users',  [UserController::class, 'index']);
 
 Route::post('/users/insert', [UserController::class , 'store']);

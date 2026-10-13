@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
 
     </head>
-<body  class="bg-gray-200">
+<body  style="background-image: linear-gradient(rgb(233, 233, 233),rgba(255, 255, 255, 0.853)) ,url('shop8.jpg')"  class="bg-gray-200  bg-cover bg-top">
 
    <header class="w-full h-16 bg-[#f77f00]">
         <div class="flex flex-row gap-3 items-center justify-center p-3 ">
