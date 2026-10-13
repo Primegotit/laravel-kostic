@@ -118,13 +118,13 @@
 
         <div class=" text-sm overflow-auto  flex flex-col gap-4  shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3 ">
             
-            <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.433),rgba(0, 0, 0, 0.531)) ,url('shop9.jpg')" class=" p-4  bg-black/70 relative h-96 bg-cover bg-[position:50%_20%]  px-3 py-3  rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row   gap-2 ">
+            <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.146),rgba(0, 0, 0, 0.531)) ,url('shop9.jpg')" class=" p-4  bg-black/70 relative h-96 bg-cover bg-[position:50%_20%]  px-3 py-3  rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row   gap-2 ">
                 <div class="relative flex justify-between p-2 items-end h-full ">
                     <div class="  ">
                     <h2 class="text-gray-300 text-2xl md:text-5xl font-extrabold">KOSTIC</h2>
                     <p class="text-orange-400 text-base md:text-2xl">Make a purchase online</p>
                     </div>
-                    <img src="logo15.png" alt="" class="h-12 md:h-20  opacity-90">
+                    <img src="logo7.png" alt="" class="h-12 md:h-20  opacity-90">
                     
                 </div>
             </div>
