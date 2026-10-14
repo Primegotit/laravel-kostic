@@ -141,7 +141,7 @@
 
                 <li>
                     <a href="/products"
-                    class="flex items-center gap-3 w-full p-3 rounded-md
+                    class="flex items-center gap-3 w-full p-3 rounded-md bg-[#ffb86d]
                             hover:bg-gray-300 transition duration-300">
                         <i class="fa-solid fa-eye"></i>
                         <span class="hidden sm:hidden md:block lg:block xl:block ">View Products</span>
