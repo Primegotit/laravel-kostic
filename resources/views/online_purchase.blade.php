@@ -19,7 +19,7 @@
 
         <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
     </head>
-<body class="bg-gray-200 ">
+<body class="bg-gray-200 overflow-hidden">
  <header class="w-full h-16 bg-[#f77f00] flex flex-row p-1  items-center justify-between">
  
 
@@ -211,57 +211,8 @@
                 </div>
             </div>
 
-            {{-- <div class=" px-3 py-3  rounded-lg shadow-lg bg-gray-100 flex md:flex-col flex-col lg:flex-row   gap-2">
-
-                <div class=" w-full  bg-gray-100 rounded-md border  border-[#f77f00] p-4 ">
-                    <div class=" flex flex-row items-center justify-start  gap-1 ">
-
-                        <h3 class="font-bold md:text-lg text-md">Search criteria</h3>
-                        <i class="fa-solid fa-magnifying-glass-plus text-xl text-gray-900 "></i>
-
-                    </div>
-
-                    <div class="bg-[#f77f00]  h-[1px] mt-1"></div>
-
-                    <div class="flex flex-row justify-start gap-5 mt-2 py-1  flex-wrap mb-1">
-
-                        <div class="flex flex-row justify-start gap-2 0 ">
-                            <div class="">
-                                <label for="">Search for</label>
-                                <input type="text" name="" id="" class="p-1 border border-orange-400 bg-gray-100 rounded-lg w-full">
-                            </div>
-
-
-                            <div class="">
-                                <label for="">Search by</label>
-                                <select name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100 w-full">
-                                    <option value="">Select...</option>
-                                    <option value="">Product ID</option>
-                                    <option value="">Product Name</option>
-                                    <option value="">Category</option>
-                                    <option value="">Price</option>
-                                    <option value="">Stock Quantity</option>
-                                    <option value="">Supplier</option>
-                                    <option value="">Status</option>
-                                    <option value="">Search tags</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-row gap-3 items-end justify-center ">
-                            <a href="#" class="bg-[#f77f00] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Search <i class="fa-solid fa-magnifying-glass text-md text-white  "></i></a>
-                            <a href="#" class="bg-[#f77f00] text-white px-3 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md" >Reset <i class="fa-solid fa-rotate-left text-md text-white  "></i></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </div> --}}
             <!-- this is for the table container -->
             <div class="rounded-lg shadow-lg bg-gray-100 p-3 flex flex-col gap-4">
-
-
-
 
                 <div class="flex flex-row flex-wrap bg-gray-100 gap-6 justify-center lg:justify-start py-4 rounded-lg  p-4 border border-[#f77f00]">
 
@@ -282,10 +233,12 @@
                         </ul>
                     </div>
 
+
+        <div class="  overflow-y-auto w-full group relative flex flex-row flex-wrap gap-4 snap-y snap-mandatory scroll-smooth scroll-pt-4 scroll-pb-4">
             <!-- Tile  -->
             @foreach($products as $product)
 
-                    <div class="group relative flex flex-col justify-between w-72 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="group relative flex flex-col justify-between w-72 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 snap-start" >
                         <div class="relative w-full h-48 bg-gray-50 overflow-hidden flex items-center justify-center">
                             <img src="{{ asset('laptop.jpg') }}" alt="Pro Ultra-Slim Laptop" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-2.5 left-2.5 bg-[#f77f00] text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">{{ $product->extra_info ?? ""}}</span>
@@ -332,7 +285,7 @@
                     </div>
 
             @endforeach
-
+</div>
             <!-- Tile  -->
 
 
