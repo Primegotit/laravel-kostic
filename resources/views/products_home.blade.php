@@ -282,7 +282,7 @@
                         KOSTIC
                     </h2>
 
-                    <p class="text-orange-400 text-base md:text-2xl">
+                    <p class="text-orange-400 text-base md:text-xl">
                        Explore great finds at great prices.
                     </p>
                 </div>

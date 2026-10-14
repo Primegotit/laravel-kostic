@@ -93,7 +93,7 @@
 
             <div class="flex flex-row gap-3 items-center justify-center py-3 px-1 ">
                 <img src="images/logo15.png" alt="" class="h-9 ">
-                <h3 class="text-white lg:text-xl sm:text-sm font-bold"><i class="fa-solid fa-store mr-2"></i>Product Listings</h3>
+                <h3 class="text-white lg:text-xl sm:text-sm text-xs font-bold"><i class="fa-solid fa-store mr-2"></i>Product Listings</h3>
             </div>
  
         <div class="flex flex-row gap-2 items-center justify-end  px-3">
@@ -101,11 +101,11 @@
 
 
                 
-                <div class="relative">
+                <div class="relative ">
                     <input
                         type="search"
                         placeholder="Search"
-                    class="p-1 pl-3 pr-8 rounded-full text-sm bg-gray-200  focus:outline-gray-500 focus:outline-2"
+                    class="p-1 pl-3  pr-8 rounded-full text-sm bg-gray-200   focus:outline-gray-500 focus:outline-2"
                     >
                     <i class="fa-solid fa-search absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
                 </div>

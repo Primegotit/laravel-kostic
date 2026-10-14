@@ -1,142 +1,147 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         @fonts
 
-        <!-- Styles / Scripts -->
-        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <title>{{ config('app.name', 'KOSTIC') }} | Login</title>
 
-        @else
-            <style>
-            </style>
-        @endif
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
+</head>
 
-    </head>
-<body  style="background-image: linear-gradient(rgb(233, 233, 233),rgba(255, 255, 255, 0.853)) ,url('shop8.jpg')"  class="bg-gray-200  bg-cover bg-top">
+<body
+    style="background-image: linear-gradient(rgba(233,233,233,0.85), rgba(255,255,255,0.94)), url('{{ asset('shop8.jpg') }}')"
+    class="min-h-screen bg-gray-200 bg-cover bg-center flex flex-col"
+>
+    <!-- Header -->
+    <header class="w-full h-14 shrink-0 bg-[#f77f00] shadow-md">
+        <div class="h-full flex items-center justify-center gap-3 px-4">
+            <img src="{{ asset('logo15.png') }}" alt="KOSTIC logo" class="h-8 w-auto">
 
-   <header class="w-full h-16 bg-[#f77f00]">
-        <div class="flex flex-row gap-3 items-center justify-center p-3 ">
-            <img src="logo15.png" alt="" class="h-9 ">
-            <h3 class="text-white text-2xl font-bold">KOSTIC</h3>
+            <h1 class="text-white text-2xl font-bold tracking-wide">
+                KOSTIC
+            </h1>
         </div>
-   </header>
+    </header>
 
+    <!-- Login Section -->
+    <main class="flex-1 flex items-center justify-center p-3 sm:p-5">
 
-   <main class="flex flex-col justify-center items-center h-[calc(100vh-4rem)]">
-        <div id="popup-container" class="w-full h-full bg-[#f77f00]/30 backdrop-blur-sm hidden"></div>
+        <div
+            id="login-container"
+            class="w-full max-w-md bg-[#f77f00] p-4 sm:p-6 rounded-2xl shadow-xl"
+        >
+            <!-- Logo and Heading -->
+            <div class="flex flex-col items-center mb-4">
+                <img
+                    src="{{ asset('logo15.png') }}"
+                    alt=""
+                    class="h-10 w-auto mb-2"
+                >
 
+                <h2 class="text-white text-xl font-bold text-center">
+                    Welcome Back
+                </h2>
 
-        <div class="w-11/12 md:w-7/12 lg:w-5/12  sm:h-5/7 md:h-6/7 lg:h-6/7 xl:h-6/7 2xl:h-4/7 bg-[#f77f00] p-6 rounded-lg flex flex-col items-center gap-2 shadow-lg " id="login-container">
-            <h3 class="text-white  font-bold  ">Enter your login details</h3>
+                <p class="text-white/90 text-sm mt-1 text-center">
+                    Enter your login details to continue
+                </p>
+            </div>
+
+            <!-- General Login Error -->
             @error('errormessage')
-                <p class="text-black text-sm bg-red-700 p-2 ">{{ $message }}</p>
+                <div class="mb-3 rounded-lg bg-red-100 border border-red-300 p-3 text-red-800 text-sm">
+                    <i class="fas fa-circle-exclamation mr-2"></i>
+                    {{ $message }}
+                </div>
             @enderror
-            <form action="/users/login" method="POST" class="w-full flex flex-col gap-6 h-full  p-2 justify-start ">
+
+            <!-- Login Form -->
+            <form
+                action="/users/login"
+                method="POST"
+                class="flex flex-col gap-3"
+            >
                 @csrf
-                <div class="flex flex-col justfiy-center items-center ">
-                    <img src="logo15.png" alt="" class="h-10 ">
+
+                <!-- Username -->
+                <div class="flex flex-col gap-1">
+                    <label for="username" class="text-white font-semibold text-sm">
+                        Username
+                    </label>
+
+                    <div class="relative">
+                        <i class="fas fa-user absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            value="{{ old('username') }}"
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            required
+                            class="w-full rounded-lg bg-white py-2 pl-10 pr-3 text-gray-800 outline-none border-2 border-transparent focus:border-black focus:ring-2 focus:ring-black/20"
+                        >
+                    </div>
+
+                    @error('username')
+                        <span class="text-white text-xs">{{ $message }}</span>
+                    @enderror
                 </div>
 
-                <div class="flex flex-col gap-6 self-center w-11/12">
-                    <div class="flex flex-col gap-1">
-                        <label for="" class="text-white font-bold">Username</label>
-                        <input type="text" placeholder="Enter your username" class="p-1 rounded-lg bg-white" name="username" >
-                        @error('username')
-                            <span class="text-black text-xs">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <div class="flex flex-col gap-1">
-                        <label for="" class="text-white font-bold">Password</label>
-                        <input type="password" name="password" placeholder="Enter your password" class="p-1 rounded-lg bg-white" >
-                        @error('password')
-                            <span class="text-black text-xs">{{ $message }}</span>
-                        @enderror
+                <!-- Password -->
+                <div class="flex flex-col gap-1">
+                    <label for="password" class="text-white font-semibold text-sm">
+                        Password
+                    </label>
+
+                    <div class="relative">
+                        <i class="fas fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                            class="w-full rounded-lg bg-white py-2 pl-10 pr-3 text-gray-800 outline-none border-2 border-transparent focus:border-black focus:ring-2 focus:ring-black/20"
+                        >
                     </div>
 
-                    <div>
-                        <a href="/register" class="text-black text-md underline cursor-pointer transition duration-300 hover:text-gray-100   ">Forgot password?</a>
-                    </div>
-                
+                    @error('password')
+                        <span class="text-white text-xs">{{ $message }}</span>
+                    @enderror
                 </div>
-                
-                <button type="submit" id="login-btn" class="w-11/12 mt-2 flex flex-col self-center items-center justify-center shadow-lg hover:scale-105 p-1 rounded-lg h-10 text-md font-bold bg-black text-white transition duration-300 " >Login</button>
+
+                <!-- Forgot Password -->
+                <div class="flex justify-start mt-2">
+                    <a
+                        href="/register"
+                        class="text-black text-sm  hover:text-white transition duration-300"
+                    >
+                        Ready to shop? Create an account
+                    </a>
+                </div>
+
+                <!-- Login Button -->
+                <button
+                    type="submit"
+                    id="login-btn"
+                    class="w-full h-10 rounded-lg bg-black text-white font-bold shadow-md cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition duration-300"
+                >
+                    Login
+                </button>
+
             </form>
         </div>
-
-        <!-- <div class="lg:w-1/4  h-72 px-3 py-3 bg-white/65 fixed  border border-[#f77f00] rounded-lg shadow-lg shadow-[#3a3939] hidden " id="successful-login-popup">
-
-            <div class="flex flex-row justify-center items-center">
-                <img src="images/logo1.png" alt="" class="h-24  fixed translate-y-[-35px]  ">
-            </div>
-            <h1 class="text-3xl font-bold text-center mt-6">Welcome Promise!</h1>
-                <i class="fas fa-circle-check text-[50px] text-center text-[#f77f00] flex flex-row justify-center w-full pt-1"></i>
-
-            <p class="text-center text-gray-600 flex flex-row justify-center items-center w-4/5 m-auto py-6">Hie login was successful, welcome to our application </p>
-
-            <a href="user_management.html" class=" w-4/5 self-center m-auto flex flex-col  items-center justify-center shadow-lg hover:scale-105 p-1 rounded-lg h-10 text-md font-bold bg-black text-white transition duration-300   ">Ok</a>
-        </div>
+    </main>
 
 
-        <div class="lg:w-1/4  h-72 px-3 py-3 bg-white/65 fixed  border border-[#f77f00] rounded-lg shadow-lg shadow-[#3a3939] hidden " id="failed-login-popup">
-
-            <div class="flex flex-row justify-center items-center">
-                <img src="images/logo1.png" alt="" class="h-24  fixed translate-y-[-35px]  ">
-            </div>
-            <h1 class="text-3xl font-bold text-center mt-6">Login failed!</h1>
-                <i class="fas fa-circle-xmark text-[50px] text-center text-[#f70000] flex flex-row justify-center w-full pt-1"></i>
-
-            <p class="text-center text-gray-600 flex flex-row justify-center items-center w-4/5 m-auto py-6">Sorry Login failed, please try again or exit the application.</p>
-
-            <a href="index.html" class=" w-4/5 self-center m-auto flex flex-col  items-center justify-center shadow-lg hover:scale-105 p-1 rounded-lg h-10 text-md font-bold bg-black text-white transition duration-300   ">Try again</a>
-        </div> -->
-   </main>
-
-   {{-- <script>
-    var popup = document.getElementById("popup")
-    var popupContainer;
-    var loginContainer;
-    var popup;
-    var loginBtn;
-
-    loginBtn = document.getElementById("login-btn");
-    loginBtn.addEventListener("click", showSuccessPopup)
-
-    function showSuccessPopup() {
-        popupContainer = document.getElementById("popup-container");
-        loginContainer = document.getElementById("login-container");
-        popup = document.getElementById("successful-login-popup");
-
-        popupContainer.classList.add("visible")
-        popupContainer.classList.remove("hidden");
-
-        loginContainer.classList.add("hidden");
-
-        popup.classList.add("visible");
-        popup.classList.remove("hidden");
-    }
-
-    function showFailPopup() {
-        popupContainer = document.getElementById("popup-container");
-        loginContainer = document.getElementById("login-container");
-        popup = document.getElementById("failed-login-popup");
-
-        popupContainer.classList.add("visible")
-        popupContainer.classList.remove("hidden");
-
-        loginContainer.classList.add("hidden");
-
-        popup.classList.add("visible");
-        popup.classList.remove("hidden");
-    }
-
-   </script> --}}
 </body>
 </html>

@@ -118,30 +118,28 @@ class UserController extends Controller
         return redirect('/');
     }
     
-    public function login(Request $request){
+public function login(Request $request)
+{
+    $request->validate([
+        'username' => 'required',
+        'password' => 'required',
+    ]);
 
-        $request->validate([
-            'username' => 'required',
-            'password' => 'required',
-        ]);
-    
-        $user = User::where('username', $request->username)->first();
+    $user = User::where('username', $request->username)->first();
 
-        if ($user && Hash::check($request->password, $user->password)) {
+    if ($user && Hash::check($request->password, $user->password)) {
 
-            $request->session()->put('user_id', $user->id);
+        $request->session()->put('user_id', $user->id);
 
-            return redirect('users');
-        }
-        else{
-            return back()->withErrors([
-                'errormessage' => 'Invalid username or password.',
-            ])->onlyInput('username');
-        }
-
-        return redirect()->back();
+        return redirect('/users');
     }
 
+    return back()
+        ->withErrors([
+            'errormessage' => 'Invalid username or password.',
+        ])
+        ->onlyInput('username');
+}
 
     public function logout()
     {
