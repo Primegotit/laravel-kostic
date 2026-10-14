@@ -298,7 +298,37 @@
         </div>
 
         <!-- Empty second row: fills the remaining screen space -->
-        <div class="min-h-0 overflow-hidden rounded-lg bg-gray-100 shadow-lg">
+        <div class="min-h-0 overflow-hidden rounded-lg bg-gray-100 shadow-lg p-3">
+
+            <div class="w-full p-3">
+                <p class="text-xl text-gray-600 font-bold flex flex-row items-center justify-start gap-1">Welcome <i class="fa-solid fa-handshake text-orange-400"></i></p>
+                <div class="flex flex-row justify-between items-center w-full gap-1 flex-wrap">
+                    <p class="text-3xl text-black font-bold "> {{ $currentUser->first_name ?? "" }} {{ $currentUser->last_name ?? "" }}</p>
+                    <p class="text-sm text-black font-bold flex flex-row items-center justify-center gap-1"> {{ $currentUser->email_address ?? "" }} <i class="fa-solid fa-envelope text-orange-400"></i> </p>
+                </div>
+                <div class="w-full h-[2px] bg-orange-400 "></div>
+            </div>
+
+            <div class="flex flex-row gap-5 p-3">
+                <div class="w-3/6 h-70 bg-gray-200 rounded-lg shadow-lg border border-gray-300">
+
+                </div>
+
+                <div class="w-3/6 h-70 bg-gray-200 rounded-lg shadow-lg border border-gray-300">
+
+                </div>
+
+            </div>
+
+            <div class="flex flex-row w-full items-center justify-center p-3">
+                <a href="/products"
+                        class="flex items-center gap-3  py-3 px-5 rounded-full bg-[#f77f00]
+                        hover:bg-black hover:scale-105  hover:cursor-pointer transition duration-300 text-white">
+                    <span class="font-bold  ">View Products</span>
+                    <i class="fa-solid fa-eye"></i>
+
+                </a>
+            </div>
         </div>
 
     </div>

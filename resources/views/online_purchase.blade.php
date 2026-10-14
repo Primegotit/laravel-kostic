@@ -399,7 +399,7 @@
                                             <!-- Add to cart -->
                                             <a
                                                 href="/products/add-to-cart/{{ $product->id }}"
-                                                class="bg-[#f77f00] hover:bg-[#d96e00] active:scale-95 text-white px-3 h-8 rounded-lg text-xs font-semibold shadow-sm hover:shadow flex items-center gap-1.5 transition-all"
+                                                class="bg-[#f77f00] hover:bg-black active:scale-95 text-white px-3 h-8 rounded-lg text-xs font-semibold shadow-sm hover:shadow flex items-center gap-1.5 transition-all duration-300"
                                             >
                                                 <i class="fa-solid fa-cart-shopping text-xs"></i>
                                                 Add
