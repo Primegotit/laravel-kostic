@@ -43,7 +43,7 @@
             <p class="text-white font-bold hidden sm:block">{{ $currentUser->first_name ?? "" }}</p>
             <div>
                 <button type="button" id="profile-view" class="relative block focus:outline-none rounded-full cursor-pointer transition duration-300 hover:scale-105 active:scale-95 focus:ring-2 focus:ring-white/80" aria-label="Toggle profile menu" aria-expanded="false">
-                    <img src="whatsapp2.png" alt="Profile" class="h-11 w-11 rounded-full object-cover bg-gray-700 border-2 border-white shadow-sm">
+                    <img src="{{ asset('whatsapp2.png') }}" alt="Profile" class="h-11 w-11 rounded-full object-cover bg-gray-700 border-2 border-white shadow-sm">
                     <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></span>
                 </button>
             </div>
@@ -61,7 +61,7 @@
             
             <div class="flex items-center gap-3">
                 <div class="relative shrink-0">
-                    <img src="whatsapp2.png" alt="Promise Siafwiyo" class="w-14 h-14 rounded-full border-2 border-white object-cover shadow-md bg-gray-700">
+                    <img src="{{ asset('whatsapp2.png') }}" alt="Promise Siafwiyo" class="w-14 h-14 rounded-full border-2 border-white object-cover shadow-md bg-gray-700">
                     <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full" title="Online"></span>
                 </div>
                 <div class="min-w-0 pr-4">
@@ -131,7 +131,7 @@
             <ul class="flex flex-col gap-2 text-sm">
 
                 <li>
-                    <a href="/home"
+                    <a href="/products/home"
                     class="flex items-center gap-3  md:w-full p-3 rounded-md
                             hover:bg-gray-300 transition duration-300">
                         <i class="fa-solid fa-house"></i>
@@ -206,7 +206,7 @@
                     <h2 class="text-gray-100 text-shadow-lg text-shadow-gray-800 text-2xl md:text-5xl font-extrabold">KOSTIC</h2>
                     <p class="text-orange-400 text-base md:text-2xl">Make a purchase online</p>
                     </div>
-                    <img src="logo7.png" alt="" class="h-12 md:h-20  opacity-90">
+                    <img src="{{ asset('logo7.png') }}" alt="" class="h-12 md:h-20  opacity-90">
                     
                 </div>
             </div>
@@ -287,7 +287,7 @@
 
                     <div class="group relative flex flex-col justify-between w-72 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="relative w-full h-48 bg-gray-50 overflow-hidden flex items-center justify-center">
-                            <img src="laptop.jpg" alt="Pro Ultra-Slim Laptop" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            <img src="{{ asset('laptop.jpg') }}" alt="Pro Ultra-Slim Laptop" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-2.5 left-2.5 bg-[#f77f00] text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">{{ $product->extra_info ?? ""}}</span>
                             <button type="button" title="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-gray-400 hover:text-red-500 hover:bg-white shadow-sm flex items-center justify-center transition-all active:scale-90">
                                 <i class="fa-regular fa-heart text-sm"></i>

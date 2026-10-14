@@ -23,6 +23,13 @@ class ProductController extends Controller
         ]);
     }
 
+    public function showProductsHome(){
+        $currentUser = User::find(session('user_id')) ; 
+        return view('products_home', [
+            'currentUser' => $currentUser
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */

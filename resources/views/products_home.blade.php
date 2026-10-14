@@ -25,7 +25,7 @@
 
             <div class="flex flex-row gap-3 items-center justify-center py-3 px-1 ">
                 <img src="images/logo15.png" alt="" class="h-9 ">
-                <h3 class="text-white lg:text-xl sm:text-sm font-bold"><i class="fa-solid fa-store mr-2"></i>Product Listings</h3>
+                <h3 class="text-white lg:text-xl sm:text-sm font-bold"><i class="fa-solid fa-house mr-2"></i>Home</h3>
             </div>
  
         <div class="flex flex-row gap-2 items-center justify-end  px-3">
@@ -132,7 +132,7 @@
 
                 <li>
                     <a href="/home"
-                    class="flex items-center gap-3  md:w-full p-3 rounded-md
+                    class="flex items-center gap-3  md:w-full p-3 rounded-md bg-[#ffb86d]
                             hover:bg-gray-300 transition duration-300">
                         <i class="fa-solid fa-house"></i>
                         <span class="hidden sm:hidden md:block lg:block xl:block ">Home</span>
@@ -141,7 +141,7 @@
 
                 <li>
                     <a href="/products"
-                    class="flex items-center gap-3 w-full p-3 rounded-md bg-[#ffb86d]
+                    class="flex items-center gap-3 w-full p-3 rounded-md 
                             hover:bg-gray-300 transition duration-300">
                         <i class="fa-solid fa-eye"></i>
                         <span class="hidden sm:hidden md:block lg:block xl:block ">View Products</span>
@@ -211,140 +211,11 @@
                 </div>
             </div>
 
-            {{-- <div class=" px-3 py-3  rounded-lg shadow-lg bg-gray-100 flex md:flex-col flex-col lg:flex-row   gap-2">
 
-                <div class=" w-full  bg-gray-100 rounded-md border  border-[#f77f00] p-4 ">
-                    <div class=" flex flex-row items-center justify-start  gap-1 ">
-
-                        <h3 class="font-bold md:text-lg text-md">Search criteria</h3>
-                        <i class="fa-solid fa-magnifying-glass-plus text-xl text-gray-900 "></i>
-
-                    </div>
-
-                    <div class="bg-[#f77f00]  h-[1px] mt-1"></div>
-
-                    <div class="flex flex-row justify-start gap-5 mt-2 py-1  flex-wrap mb-1">
-
-                        <div class="flex flex-row justify-start gap-2 0 ">
-                            <div class="">
-                                <label for="">Search for</label>
-                                <input type="text" name="" id="" class="p-1 border border-orange-400 bg-gray-100 rounded-lg w-full">
-                            </div>
-
-
-                            <div class="">
-                                <label for="">Search by</label>
-                                <select name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100 w-full">
-                                    <option value="">Select...</option>
-                                    <option value="">Product ID</option>
-                                    <option value="">Product Name</option>
-                                    <option value="">Category</option>
-                                    <option value="">Price</option>
-                                    <option value="">Stock Quantity</option>
-                                    <option value="">Supplier</option>
-                                    <option value="">Status</option>
-                                    <option value="">Search tags</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-row gap-3 items-end justify-center ">
-                            <a href="#" class="bg-[#f77f00] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Search <i class="fa-solid fa-magnifying-glass text-md text-white  "></i></a>
-                            <a href="#" class="bg-[#f77f00] text-white px-3 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md" >Reset <i class="fa-solid fa-rotate-left text-md text-white  "></i></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </div> --}}
             <!-- this is for the table container -->
-            <div class="rounded-lg shadow-lg bg-gray-100 p-3 flex flex-col gap-4">
+            
 
-
-
-
-                <div class="flex flex-row flex-wrap bg-gray-100 gap-6 justify-center lg:justify-start py-4 rounded-lg  p-4 border border-[#f77f00]">
-
-                    <div class="w-full flex flex-row items-center gap-4  shadow-lg rounded-lg p-4 flex-wrap  bg-gray-200">
-                        <p class="md:text-lg text-md font-bold">Filter</p>
-                        <select name="" id="" class="visible md:hidden p-1 border border-[#f77f00] rounded-lg bg-gray-200 w-full ">
-                            <option value="">All</option>
-                            @foreach ($categories as $category)
-                                <option value="{{ $category ?? "" }}">{{ $category ?? "" }}</option>       
-                            @endforeach
-                        </select>
-                        
-                        <ul class=" hidden md:flex     flex-row gap-2 justify-start lg:justify-between  items-center flex-wrap text-xs">
-                            <li class="transition duration-300 hover:scale-105 "><a href=""class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white font-bold px-5 py-1 rounded-full  ">All</a></li>
-                            @foreach ($categories as $category)
-                                <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">{{ $category ?? "" }}</a></li>       
-                            @endforeach
-                        </ul>
-                    </div>
-
-            <!-- Tile  -->
-            @foreach($products as $product)
-
-                    <div class="group relative flex flex-col justify-between w-72 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div class="relative w-full h-48 bg-gray-50 overflow-hidden flex items-center justify-center">
-                            <img src="laptop.jpg" alt="Pro Ultra-Slim Laptop" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-2.5 left-2.5 bg-[#f77f00] text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">{{ $product->extra_info ?? ""}}</span>
-                            <button type="button" title="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-gray-400 hover:text-red-500 hover:bg-white shadow-sm flex items-center justify-center transition-all active:scale-90">
-                                <i class="fa-regular fa-heart text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="p-4 flex flex-col flex-grow justify-between gap-2.5">
-                            <div>
-                                <div class="flex items-center justify-between text-[11px] mb-1">
-                                    <span class="font-bold text-[#f77f00] uppercase tracking-wider">{{ $product->category ?? "" }}</span>
-                                    <span class="flex items-center gap-1 text-amber-600 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>{{ $product->stock ?? "" }} left</span>
-                                </div>
-                                <h3 class="font-bold text-gray-900 text-base leading-snug group-hover:text-[#f77f00] transition-colors truncate" title="Pro Ultra-Slim Laptop 15.6">{{ $product->name }}</h3>
-                                <ul class="flex flex-wrap gap-1 text-[11px] text-gray-600 mb-2 mt-3">
-                                    @php
-                                        
-                                        $tags = array_map('trim', explode(",", $product->tags));
-                                        
-                                    @endphp
-                                    @foreach ($tags as $tag)
-                                        <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">{{ $tag }}</li>
-                                    @endforeach
-                                </ul>
-
-                            </div>
-                            <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
-                                <div>
-                                    <div class="flex items-baseline gap-1.5">
-                                        <span class="text-lg font-bold text-gray-900">${{ $product->usd_price }}</span>
-                                    </div>
-                                    <span class="text-[11px] font-semibold text-[#f77f00]">{{ $product->zar_price }} ZAR</span>
-                                </div>
-                                <div class="flex items-center gap-1.5">
-                                    <a href="#" title="Preview" class="w-8 h-8 rounded-lg border border-gray-200 text-gray-500 hover:text-[#f77f00] hover:border-[#f77f00] hover:bg-orange-50 flex items-center justify-center transition-colors">
-                                        <i class="fa-regular fa-eye text-xs"></i>
-                                    </a>
-                                    <a href="/products/add-to-cart/{{ $product->id }}" class="bg-[#f77f00] hover:bg-[#d96e00] active:scale-95 text-white px-3 h-8 rounded-lg text-xs font-semibold shadow-sm hover:shadow flex items-center gap-1.5 transition-all">
-                                        <i class="fa-solid fa-cart-shopping text-xs"></i> Add
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-            @endforeach
-
-            <!-- Tile  -->
-
-
-                </div>
-
-            </div>
-
-
-            </div>
-
-
-            </div>
+           
 
 
         </main>

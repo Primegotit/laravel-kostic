@@ -32,3 +32,5 @@ Route::post('/users/register', [UserController::class, 'register']);
 Route::get('/online_purchase',  [UserController::class, 'showOnlinePurchase']);
 
 Route::get('/products', [ProductController::class, 'index']);
+
+Route::get('/products/home',  [ProductController::class, 'showProductsHome']);
