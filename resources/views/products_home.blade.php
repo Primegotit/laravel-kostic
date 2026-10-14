@@ -290,7 +290,7 @@
                 <img
                     src="{{ asset('logo7.png') }}"
                     alt=""
-                    class="h-12 md:h-20 opacity-90"
+                    class="h-12 md:h-16 opacity-90"
                 >
 
             </div>

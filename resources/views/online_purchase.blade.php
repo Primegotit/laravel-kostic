@@ -99,11 +99,7 @@
         <div class="flex flex-row gap-2 items-center justify-end  px-3">
             <div class="flex flex-row gap-2 items-center justify-center ">
 
-                <div>
-                    <a href="">
-                    <i class="fa-solid fa-sliders  rounded-full px-2 py-1 "></i>  
-                    </a>
-                </div>
+
                 
                 <div class="relative">
                     <input
@@ -307,7 +303,7 @@
         <img
             src="{{ asset('logo7.png') }}"
             alt="KOSTIC logo"
-            class="h-12 md:h-20 opacity-90"
+            class="h-12 md:h-16 opacity-90"
         >
 
     </div>
@@ -317,10 +313,17 @@
         <!-- Products section -->
         <div class="min-h-0 overflow-hidden rounded-lg shadow-lg bg-gray-100 ">
 
+                {{-- <div class="w-full h-10">
+                    <a href="" class="text-black font-bold">
+                        Filter
+                    <i class="fa-solid fa-sliders  rounded-full px-2 py-1 text-black font-bold"></i>  
+                    </a>
+                </div> --}}
+
             <div class="h-full min-h-0 flex flex-col gap-2 md:gap-4 rounded-lg  bg-gray-100 p-2 ">
 
                 <!-- Category filter -->
-                <div class="w-full shrink-0 flex flex-row hidden  items-center gap-2 md:gap-4 rounded-lg bg-gray-200 p-2 md:p-4 shadow-lg">
+                <div class="w-full shrink-0 flex flex-row   items-center gap-2 md:gap-4 rounded-lg bg-gray-200 p-2 md:p-4 shadow-lg">
 
                     <p class="text-sm sm:text-sm md:text-base font-bold">
                         Filter
