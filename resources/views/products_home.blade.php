@@ -254,59 +254,57 @@
             </ul>
         </aside>
 
-        <main class="  h-[calc(100vh-4rem)] col-span-13 ">
 
+<main class="h-[calc(100dvh-4rem)] min-h-0 col-span-13">
 
-<div class="text-sm overflow-auto flex flex-col gap-4 shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3">
+    <!-- Main two-row grid -->
+    <div class="h-full min-h-0 overflow-hidden grid grid-rows-[auto_minmax(0,1fr)] gap-2 md:gap-4 bg-gray-200 p-2 md:p-3 shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)]">
 
-    <!-- Banner container: original styling preserved -->
-    <div
-        class="p-4 bg-black/70 relative h-70 bg-cover bg-[position:50%_40%] px-3 py-3 rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row gap-2 overflow-hidden"
-    >
+        <!-- Banner -->
+        <div class="relative h-32 sm:h-40 md:h-70 bg-black/70 bg-cover bg-[position:50%_40%] rounded-lg p-3 md:p-4 shadow-lg overflow-hidden">
 
-        <!-- Background image layers -->
-        <div class="absolute inset-0 banner-image banner-image-1"></div>
-        <div class="absolute inset-0 banner-image banner-image-2"></div>
-        <div class="absolute inset-0 banner-image banner-image-3"></div>
-        <div class="absolute inset-0 banner-image banner-image-4"></div>
-        <div class="absolute inset-0 banner-image banner-image-5"></div>
-        <div class="absolute inset-0 banner-image banner-image-6"></div>
+            <!-- Animated background image layers -->
+            <div class="absolute inset-0 banner-image banner-image-1"></div>
+            <div class="absolute inset-0 banner-image banner-image-2"></div>
+            <div class="absolute inset-0 banner-image banner-image-3"></div>
+            <div class="absolute inset-0 banner-image banner-image-4"></div>
+            <div class="absolute inset-0 banner-image banner-image-5"></div>
+            <div class="absolute inset-0 banner-image banner-image-6"></div>
 
-        <!-- Dark overlay: preserves your original gradient -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black/15 to-black/55"></div>
+            <!-- Dark overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/15 to-black/55"></div>
 
-        <!-- Original banner content -->
-        <div class="relative z-10 flex justify-between p-2 items-end h-full">
+            <!-- Banner content -->
+            <div class="relative z-10 flex justify-between items-end h-full p-2">
 
-            <div>
-                <h2 class="text-gray-100 text-2xl md:text-5xl font-extrabold">
-                    KOSTIC
-                </h2>
+                <div>
+                    <h2 class="text-gray-100  text-2xl md:text-5xl font-extrabold">
+                        KOSTIC
+                    </h2>
 
-                <p class="text-orange-400 text-base md:text-2xl">
-                    Make a purchase online
-                </p>
+                    <p class="text-orange-400 text-base md:text-2xl">
+                       Explore great finds at great prices.
+                    </p>
+                </div>
+
+                <img
+                    src="{{ asset('logo7.png') }}"
+                    alt=""
+                    class="h-12 md:h-20 opacity-90"
+                >
+
             </div>
 
-            <img
-                src="{{ asset('logo7.png') }}"
-                alt=""
-                class="h-12 md:h-20 opacity-90"
-            >
+        </div>
 
+        <!-- Empty second row: fills the remaining screen space -->
+        <div class="min-h-0 overflow-hidden rounded-lg bg-gray-100 shadow-lg">
         </div>
 
     </div>
 
-</div>
+</main>
 
-            <!-- this is for the table container -->
-            
-
-           
-
-
-        </main>
 
     </div>
 
