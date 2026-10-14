@@ -29,6 +29,17 @@
             </div>
 
         <div class="flex flex-row gap-2 items-center justify-end">
+            <div class="flex flex-row gap-2 items-center justify-center ">
+            <div class="relative">
+                <input
+                    type="search"
+                    placeholder="Search"
+                   class="p-1 pl-3 pr-8 rounded-full text-sm bg-gray-200  focus:outline-gray-500 focus:outline-2"
+                >
+                <i class="fa-solid fa-search absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
+            </div>
+                {{-- <button class="text-white font-bold rounded-lg px-3 py-1 hover:scale-105 transition duration-300 mr-9  border-2 border-gray-600 bg-gray-600 flex flex-row gap-3 items-center">Search </button> --}}
+            </div>
             <p class="text-white font-bold hidden sm:block">{{ $currentUser->first_name ?? "" }}</p>
             <div>
                 <button type="button" id="profile-view" class="relative block focus:outline-none rounded-full cursor-pointer transition duration-300 hover:scale-105 active:scale-95 focus:ring-2 focus:ring-white/80" aria-label="Toggle profile menu" aria-expanded="false">
@@ -113,13 +124,75 @@
             </a>
         </div>
     </div>
-        
-    <main class="  h-[calc(100vh-4rem)] ">
 
-        <div class=" text-sm overflow-auto  flex flex-col gap-4  shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3 ">
+    
+    <div class="grid grid-cols-9 ">
+        <aside class="col-span-1 bg-gray-200 p-3 rounded-lg">
+            <ul class="flex flex-col gap-2">
+
+                <li>
+                    <a href="/home"
+                    class="flex items-center gap-3 w-full p-3 rounded-md
+                            hover:bg-gray-300 transition duration-300">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/cart"
+                    class="flex items-center gap-3 w-full p-3 rounded-md
+                            hover:bg-gray-300 transition duration-300">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Cart</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/wishlist"
+                    class="flex items-center gap-3 w-full p-3 rounded-md
+                            hover:bg-gray-300 transition duration-300">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Wishlist</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/profile"
+                    class="flex items-center gap-3 w-full p-3 rounded-md
+                            hover:bg-gray-300 transition duration-300">
+                        <i class="fa-solid fa-user"></i>
+                        <span>My profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/notifications"
+                    class="flex items-center gap-3 w-full p-3 rounded-md
+                            hover:bg-gray-300 transition duration-300">
+                        <i class="fa-solid fa-bell"></i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/logout"
+                    class="flex items-center gap-3 w-full p-3 rounded-md
+                            hover:bg-red-200 transition duration-300">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+
+            </ul>
+        </aside>
+
+        <main class="  h-[calc(100vh-4rem)] col-span-8 ">
+
+            <div class=" text-sm overflow-auto  flex flex-col gap-4  shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3 ">
             
-            <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.146),rgba(0, 0, 0, 0.531)) ,url('shop9.jpg')" class=" p-4  bg-black/70 relative h-96 bg-cover bg-[position:50%_20%]  px-3 py-3  rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row   gap-2 ">
-                <div class="relative flex justify-between p-2 items-end h-full ">
+                <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.146),rgba(0, 0, 0, 0.531)) ,url('shop9.jpg')" class=" p-4  bg-black/70 relative h-70 bg-cover bg-[position:50%_20%]  px-3 py-3  rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row   gap-2 ">
+                    <div class="relative flex justify-between p-2 items-end h-full ">
                     <div class="  ">
                     <h2 class="text-gray-100 text-shadow-lg text-shadow-gray-800 text-2xl md:text-5xl font-extrabold">KOSTIC</h2>
                     <p class="text-orange-400 text-base md:text-2xl">Make a purchase online</p>
@@ -129,7 +202,7 @@
                 </div>
             </div>
 
-            <div class=" px-3 py-3  rounded-lg shadow-lg bg-gray-100 flex md:flex-col flex-col lg:flex-row   gap-2">
+            {{-- <div class=" px-3 py-3  rounded-lg shadow-lg bg-gray-100 flex md:flex-col flex-col lg:flex-row   gap-2">
 
                 <div class=" w-full  bg-gray-100 rounded-md border  border-[#f77f00] p-4 ">
                     <div class=" flex flex-row items-center justify-start  gap-1 ">
@@ -174,7 +247,7 @@
                         
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- this is for the table container -->
             <div class="rounded-lg shadow-lg bg-gray-100 p-3 flex flex-col gap-4">
 
@@ -262,10 +335,13 @@
             </div>
 
 
-        </div>
+            </div>
 
 
-    </main>
+        </main>
+
+    </div>
+
     
     <script>
         const profileView = document.getElementById("profile-view");
