@@ -196,111 +196,240 @@
             </ul>
         </aside>
 
-        <main class="  h-[calc(100vh-4rem)] col-span-13 ">
 
-            <div class=" text-sm overflow-auto  flex flex-col gap-4  shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3 ">
-            
-                <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.146),rgba(0, 0, 0, 0.531)) ,url('shop9.jpg')" class=" p-4  bg-black/70 relative h-70 bg-cover bg-[position:50%_20%]  px-3 py-3  rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row   gap-2 ">
-                    <div class="relative flex justify-between p-2 items-end h-full ">
-                    <div class="  ">
-                    <h2 class="text-gray-100 text-shadow-lg text-shadow-gray-800 text-2xl md:text-5xl font-extrabold">KOSTIC</h2>
-                    <p class="text-orange-400 text-base md:text-2xl">Make a purchase online</p>
-                    </div>
-                    <img src="{{ asset('logo7.png') }}" alt="" class="h-12 md:h-20  opacity-90">
-                    
+<main class="h-[calc(100dvh-4rem)] min-h-0 col-span-13">
+
+    <!-- Main two-row grid -->
+    <div class="h-full min-h-0 overflow-hidden grid grid-rows-[auto_minmax(0,1fr)] gap-2 md:gap-4 bg-gray-200 p-2 md:p-3 shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)]">
+
+        <!-- Banner -->
+        <div
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.146), rgba(0, 0, 0, 0.531)), url('shop9.jpg')"
+            class="relative h-32 sm:h-40 md:h-70 bg-black/70 bg-cover bg-[position:50%_20%] rounded-lg p-3 md:p-4 shadow-lg"
+        >
+            <div class="relative flex justify-between items-end h-full p-2">
+
+                <div>
+                    <h2 class="text-gray-100 text-shadow-lg text-shadow-gray-800 text-2xl md:text-5xl font-extrabold">
+                        KOSTIC
+                    </h2>
+
+                    <p class="text-orange-400 text-base md:text-2xl">
+                        Make a purchase online
+                    </p>
                 </div>
+
+                <img
+                    src="{{ asset('logo7.png') }}"
+                    alt=""
+                    class="h-12 md:h-20 opacity-90"
+                >
+
             </div>
-
-            <!-- this is for the table container -->
-            <div class="rounded-lg shadow-lg bg-gray-100 p-3 flex flex-col gap-4">
-
-                <div class="flex flex-row flex-wrap bg-gray-100 gap-6 justify-center lg:justify-start py-4 rounded-lg  p-4 border border-[#f77f00]">
-
-                    <div class="w-full flex flex-row items-center gap-4  shadow-lg rounded-lg p-4 flex-wrap  bg-gray-200">
-                        <p class="md:text-lg text-md font-bold">Filter</p>
-                        <select name="" id="" class="visible md:hidden p-1 border border-[#f77f00] rounded-lg bg-gray-200 w-full ">
-                            <option value="">All</option>
-                            @foreach ($categories as $category)
-                                <option value="{{ $category ?? "" }}">{{ $category ?? "" }}</option>       
-                            @endforeach
-                        </select>
-                        
-                        <ul class=" hidden md:flex     flex-row gap-2 justify-start lg:justify-between  items-center flex-wrap text-xs">
-                            <li class="transition duration-300 hover:scale-105 "><a href=""class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white font-bold px-5 py-1 rounded-full  ">All</a></li>
-                            @foreach ($categories as $category)
-                                <li class="transition duration-300 hover:scale-105"><a href="" class="border border-[#f77f00] hover:bg-[#f77f00] hover:text-white  px-5 py-1 rounded-full">{{ $category ?? "" }}</a></li>       
-                            @endforeach
-                        </ul>
-                    </div>
+        </div>
 
 
-        <div class="  overflow-y-auto w-full group relative flex flex-row flex-wrap gap-4 snap-y snap-mandatory scroll-smooth scroll-pt-4 scroll-pb-4">
-            <!-- Tile  -->
-            @foreach($products as $product)
+        <!-- Products section -->
+        <div class="min-h-0 overflow-hidden rounded-lg shadow-lg bg-gray-100 p-2 md:p-3">
 
-                    <div class="group relative flex flex-col justify-between w-72 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 snap-start" >
-                        <div class="relative w-full h-48 bg-gray-50 overflow-hidden flex items-center justify-center">
-                            <img src="{{ asset('laptop.jpg') }}" alt="Pro Ultra-Slim Laptop" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-2.5 left-2.5 bg-[#f77f00] text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">{{ $product->extra_info ?? ""}}</span>
-                            <button type="button" title="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-gray-400 hover:text-red-500 hover:bg-white shadow-sm flex items-center justify-center transition-all active:scale-90">
-                                <i class="fa-regular fa-heart text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="p-4 flex flex-col flex-grow justify-between gap-2.5">
-                            <div>
-                                <div class="flex items-center justify-between text-[11px] mb-1">
-                                    <span class="font-bold text-[#f77f00] uppercase tracking-wider">{{ $product->category ?? "" }}</span>
-                                    <span class="flex items-center gap-1 text-amber-600 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>{{ $product->stock ?? "" }} left</span>
+            <div class="h-full min-h-0 flex flex-col gap-2 md:gap-4 rounded-lg border border-[#f77f00] bg-gray-100 p-2 md:p-4">
+
+                <!-- Category filter -->
+                <div class="w-full shrink-0 flex flex-row flex-wrap items-center gap-2 md:gap-4 rounded-lg bg-gray-200 p-2 md:p-4 shadow-lg">
+
+                    <p class="text-md md:text-lg font-bold">
+                        Filter
+                    </p>
+
+                    <!-- Mobile filter -->
+                    <select
+                        name="category"
+                        id="category"
+                        class="visible md:hidden w-full rounded-lg border border-[#f77f00] bg-gray-200 p-1"
+                    >
+                        <option value="">All</option>
+
+                        @foreach ($categories as $category)
+                            <option value="{{ $category ?? '' }}">
+                                {{ $category ?? '' }}
+                            </option>
+                        @endforeach
+                    </select>
+
+                    <!-- Desktop filter -->
+                    <ul class="hidden md:flex flex-row flex-wrap items-center justify-start lg:justify-between gap-2 text-xs">
+
+                        <li class="transition duration-300 hover:scale-105">
+                            <a
+                                href=""
+                                class="rounded-full border border-[#f77f00] px-5 py-1 font-bold hover:bg-[#f77f00] hover:text-white"
+                            >
+                                All
+                            </a>
+                        </li>
+
+                        @foreach ($categories as $category)
+                            <li class="transition duration-300 hover:scale-105">
+                                <a
+                                    href=""
+                                    class="rounded-full border border-[#f77f00] px-5 py-1 hover:bg-[#f77f00] hover:text-white"
+                                >
+                                    {{ $category ?? '' }}
+                                </a>
+                            </li>
+                        @endforeach
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Scrollable products area -->
+                <div class="flex-1 min-h-0 w-full overflow-y-auto overflow-x-hidden overscroll-y-contain">
+
+                    <div class="flex flex-row flex-wrap content-start items-stretch gap-3 md:gap-4 pb-4">
+
+                        @foreach ($products as $product)
+
+                            <!-- Product card -->
+                            <div class="group relative flex flex-col justify-between w-full sm:w-72 sm:shrink-0 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+                                <!-- Product image -->
+                                <div class="relative w-full h-48 bg-gray-50 overflow-hidden flex items-center justify-center">
+
+                                    <img
+                                        src="{{ asset('laptop.jpg') }}"
+                                        alt="{{ $product->name }}"
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                    >
+
+                                    <span class="absolute top-2.5 left-2.5 bg-[#f77f00] text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">
+                                        {{ $product->extra_info ?? '' }}
+                                    </span>
+
+                                    <button
+                                        type="button"
+                                        title="Add to wishlist"
+                                        class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-gray-400 hover:text-red-500 hover:bg-white shadow-sm flex items-center justify-center transition-all active:scale-90"
+                                    >
+                                        <i class="fa-regular fa-heart text-sm"></i>
+                                    </button>
+
                                 </div>
-                                <h3 class="font-bold text-gray-900 text-base leading-snug group-hover:text-[#f77f00] transition-colors truncate" title="Pro Ultra-Slim Laptop 15.6">{{ $product->name }}</h3>
-                                <ul class="flex flex-wrap gap-1 text-[11px] text-gray-600 mb-2 mt-3">
-                                    @php
-                                        
-                                        $tags = array_map('trim', explode(",", $product->tags));
-                                        
-                                    @endphp
-                                    @foreach ($tags as $tag)
-                                        <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">{{ $tag }}</li>
-                                    @endforeach
-                                </ul>
 
-                            </div>
-                            <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
-                                <div>
-                                    <div class="flex items-baseline gap-1.5">
-                                        <span class="text-lg font-bold text-gray-900">${{ $product->usd_price }}</span>
+
+                                <!-- Product details -->
+                                <div class="p-4 flex flex-col flex-grow justify-between gap-2.5">
+
+                                    <div>
+
+                                        <!-- Category and stock -->
+                                        <div class="flex items-center justify-between text-[11px] mb-1">
+
+                                            <span class="font-bold text-[#f77f00] uppercase tracking-wider">
+                                                {{ $product->category ?? '' }}
+                                            </span>
+
+                                            <span class="flex items-center gap-1 text-amber-600 font-medium">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                                                {{ $product->stock ?? '' }} left
+                                            </span>
+
+                                        </div>
+
+
+                                        <!-- Product name -->
+                                        <h3
+                                            title="{{ $product->name }}"
+                                            class="font-bold text-gray-900 text-base leading-snug group-hover:text-[#f77f00] transition-colors truncate"
+                                        >
+                                            {{ $product->name }}
+                                        </h3>
+
+
+                                        <!-- Product tags -->
+                                        <ul class="flex flex-wrap gap-1 text-[11px] text-gray-600 mb-2 mt-3">
+
+                                            @php
+                                                $tags = array_map('trim', explode(',', $product->tags ?? ''));
+                                            @endphp
+
+                                            @foreach ($tags as $tag)
+                                                @if ($tag !== '')
+                                                    <li class="px-2 py-0.5 rounded-md bg-gray-100 border border-gray-200">
+                                                        {{ $tag }}
+                                                    </li>
+                                                @endif
+                                            @endforeach
+
+                                        </ul>
+
                                     </div>
-                                    <span class="text-[11px] font-semibold text-[#f77f00]">{{ $product->zar_price }} ZAR</span>
+
+
+                                    <!-- Price and actions -->
+                                    <div class="pt-2.5 border-t border-gray-100 flex items-center justify-between gap-2">
+
+                                        <div>
+
+                                            <div class="flex items-baseline gap-1.5">
+                                                <span class="text-lg font-bold text-gray-900">
+                                                    ${{ $product->usd_price }}
+                                                </span>
+                                            </div>
+
+                                            <span class="text-[11px] font-semibold text-[#f77f00]">
+                                                {{ $product->zar_price }} ZAR
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="flex items-center gap-1.5">
+
+                                            <!-- Preview -->
+                                            <a
+                                                href="#"
+                                                title="Preview"
+                                                class="w-8 h-8 rounded-lg border border-gray-200 text-gray-500 hover:text-[#f77f00] hover:border-[#f77f00] hover:bg-orange-50 flex items-center justify-center transition-colors"
+                                            >
+                                                <i class="fa-regular fa-eye text-xs"></i>
+                                            </a>
+
+                                            <!-- Add to cart -->
+                                            <a
+                                                href="/products/add-to-cart/{{ $product->id }}"
+                                                class="bg-[#f77f00] hover:bg-[#d96e00] active:scale-95 text-white px-3 h-8 rounded-lg text-xs font-semibold shadow-sm hover:shadow flex items-center gap-1.5 transition-all"
+                                            >
+                                                <i class="fa-solid fa-cart-shopping text-xs"></i>
+                                                Add
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
                                 </div>
-                                <div class="flex items-center gap-1.5">
-                                    <a href="#" title="Preview" class="w-8 h-8 rounded-lg border border-gray-200 text-gray-500 hover:text-[#f77f00] hover:border-[#f77f00] hover:bg-orange-50 flex items-center justify-center transition-colors">
-                                        <i class="fa-regular fa-eye text-xs"></i>
-                                    </a>
-                                    <a href="/products/add-to-cart/{{ $product->id }}" class="bg-[#f77f00] hover:bg-[#d96e00] active:scale-95 text-white px-3 h-8 rounded-lg text-xs font-semibold shadow-sm hover:shadow flex items-center gap-1.5 transition-all">
-                                        <i class="fa-solid fa-cart-shopping text-xs"></i> Add
-                                    </a>
-                                </div>
+
                             </div>
-                        </div>
+                            <!-- End product card -->
+
+                        @endforeach
+
                     </div>
 
-            @endforeach
-</div>
-            <!-- Tile  -->
-
-
                 </div>
+                <!-- End scrollable products area -->
 
             </div>
 
+        </div>
+        <!-- End products section -->
 
-            </div>
+    </div>
 
+</main>
 
-            </div>
-
-
-        </main>
 
     </div>
 
