@@ -263,7 +263,7 @@
 
 
 
-                <div class="flex flex-row flex-wrap bg-gray-100 gap-6 justify-center lg:justify-center py-4 rounded-lg  p-4 border border-[#f77f00]">
+                <div class="flex flex-row flex-wrap bg-gray-100 gap-6 justify-center lg:justify-start py-4 rounded-lg  p-4 border border-[#f77f00]">
 
                     <div class="w-full flex flex-row items-center gap-4  shadow-lg rounded-lg p-4 flex-wrap  bg-gray-200">
                         <p class="md:text-lg text-md font-bold">Filter</p>
@@ -285,7 +285,7 @@
             <!-- Tile  -->
             @foreach($products as $product)
 
-                    <div class="group relative flex flex-col justify-between w-80 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="group relative flex flex-col justify-between w-72 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="relative w-full h-48 bg-gray-50 overflow-hidden flex items-center justify-center">
                             <img src="laptop.jpg" alt="Pro Ultra-Slim Laptop" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-2.5 left-2.5 bg-[#f77f00] text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">{{ $product->extra_info ?? ""}}</span>
