@@ -20,15 +20,15 @@
         <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
     </head>
 <body class="bg-gray-200 ">
- <header class="w-full h-16 bg-[#f77f00] flex flex-row p-3  items-center justify-between">
+ <header class="w-full h-16 bg-[#f77f00] flex flex-row p-1  items-center justify-between">
  
 
-            <div class="flex flex-row gap-3 items-center justify-center p-3 ">
+            <div class="flex flex-row gap-3 items-center justify-center py-3 px-1 ">
                 <img src="images/logo15.png" alt="" class="h-9 ">
-                <h3 class="text-white lg:text-xl sm:text-sm font-bold">Online purchase</h3>
+                <h3 class="text-white lg:text-xl sm:text-sm font-bold"><i class="fa-solid fa-store mr-2"></i>Product Listings</h3>
             </div>
-
-        <div class="flex flex-row gap-2 items-center justify-end">
+ 
+        <div class="flex flex-row gap-2 items-center justify-end  px-3">
             <div class="flex flex-row gap-2 items-center justify-center ">
             <div class="relative">
                 <input
@@ -126,16 +126,25 @@
     </div>
 
     
-    <div class="grid grid-cols-9 ">
-        <aside class="col-span-1 bg-gray-200 p-3 rounded-lg">
-            <ul class="flex flex-col gap-2">
+    <div class="grid grid-cols-15 ">
+        <aside class="col-span-2 bg-gray-200 p-1 rounded-lg">
+            <ul class="flex flex-col gap-2 text-sm">
 
                 <li>
                     <a href="/home"
-                    class="flex items-center gap-3 w-full p-3 rounded-md
+                    class="flex items-center gap-3  md:w-full p-3 rounded-md
                             hover:bg-gray-300 transition duration-300">
                         <i class="fa-solid fa-house"></i>
-                        <span>Home</span>
+                        <span class="hidden sm:hidden md:block lg:block xl:block ">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/products"
+                    class="flex items-center gap-3 w-full p-3 rounded-md
+                            hover:bg-gray-300 transition duration-300">
+                        <i class="fa-solid fa-eye"></i>
+                        <span class="hidden sm:hidden md:block lg:block xl:block ">View Products</span>
                     </a>
                 </li>
 
@@ -144,7 +153,7 @@
                     class="flex items-center gap-3 w-full p-3 rounded-md
                             hover:bg-gray-300 transition duration-300">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <span>Cart</span>
+                        <span class="hidden sm:hidden md:block lg:block xl:block ">Cart</span>
                     </a>
                 </li>
 
@@ -153,7 +162,7 @@
                     class="flex items-center gap-3 w-full p-3 rounded-md
                             hover:bg-gray-300 transition duration-300">
                         <i class="fa-solid fa-heart"></i>
-                        <span>Wishlist</span>
+                        <span class="hidden sm:hidden md:block lg:block xl:block ">Wishlist</span>
                     </a>
                 </li>
 
@@ -162,7 +171,7 @@
                     class="flex items-center gap-3 w-full p-3 rounded-md
                             hover:bg-gray-300 transition duration-300">
                         <i class="fa-solid fa-user"></i>
-                        <span>My profile</span>
+                        <span class="hidden sm:hidden md:block lg:block xl:block ">My profile</span>
                     </a>
                 </li>
 
@@ -171,7 +180,7 @@
                     class="flex items-center gap-3 w-full p-3 rounded-md
                             hover:bg-gray-300 transition duration-300">
                         <i class="fa-solid fa-bell"></i>
-                        <span>Notifications</span>
+                        <span class="hidden sm:hidden md:block lg:block xl:block ">Notifications</span>
                     </a>
                 </li>
 
@@ -180,14 +189,14 @@
                     class="flex items-center gap-3 w-full p-3 rounded-md
                             hover:bg-red-200 transition duration-300">
                         <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                        <span>Logout</span>
+                        <span class="hidden sm:hidden md:block lg:block xl:block ">Logout</span>
                     </a>
                 </li>
 
             </ul>
         </aside>
 
-        <main class="  h-[calc(100vh-4rem)] col-span-8 ">
+        <main class="  h-[calc(100vh-4rem)] col-span-13 ">
 
             <div class=" text-sm overflow-auto  flex flex-col gap-4  shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3 ">
             
