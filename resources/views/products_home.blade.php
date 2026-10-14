@@ -43,7 +43,7 @@
             <p class="text-white font-bold hidden sm:block">{{ $currentUser->first_name ?? "" }}</p>
             <div>
                 <button type="button" id="profile-view" class="relative block focus:outline-none rounded-full cursor-pointer transition duration-300 hover:scale-105 active:scale-95 focus:ring-2 focus:ring-white/80" aria-label="Toggle profile menu" aria-expanded="false">
-                    <img src="whatsapp2.png" alt="Profile" class="h-11 w-11 rounded-full object-cover bg-gray-700 border-2 border-white shadow-sm">
+                    <img src="{{ asset('whatsapp2.png') }}" alt="Profile" class="h-11 w-11 rounded-full object-cover bg-gray-700 border-2 border-white shadow-sm">
                     <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></span>
                 </button>
             </div>
@@ -61,7 +61,7 @@
             
             <div class="flex items-center gap-3">
                 <div class="relative shrink-0">
-                    <img src="whatsapp2.png" alt="Promise Siafwiyo" class="w-14 h-14 rounded-full border-2 border-white object-cover shadow-md bg-gray-700">
+                    <img src="{{ asset('whatsapp2.png') }}" alt="Promise Siafwiyo" class="w-14 h-14 rounded-full border-2 border-white object-cover shadow-md bg-gray-700">
                     <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full" title="Online"></span>
                 </div>
                 <div class="min-w-0 pr-4">
@@ -200,13 +200,13 @@
 
             <div class=" text-sm overflow-auto  flex flex-col gap-4  shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3 ">
             
-                <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.146),rgba(0, 0, 0, 0.531)) ,url('shop9.jpg')" class=" p-4  bg-black/70 relative h-70 bg-cover bg-[position:50%_20%]  px-3 py-3  rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row   gap-2 ">
+                <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.146),rgba(0, 0, 0, 0.531)) ,url('{{ asset('shop9.jpg') }}')" class=" p-4  bg-black/70 relative h-70 bg-cover bg-[position:50%_20%]  px-3 py-3  rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row   gap-2 ">
                     <div class="relative flex justify-between p-2 items-end h-full ">
                     <div class="  ">
                     <h2 class="text-gray-100 text-shadow-lg text-shadow-gray-800 text-2xl md:text-5xl font-extrabold">KOSTIC</h2>
                     <p class="text-orange-400 text-base md:text-2xl">Make a purchase online</p>
                     </div>
-                    <img src="logo7.png" alt="" class="h-12 md:h-20  opacity-90">
+                    <img src="{{ asset('logo7.png') }}" alt="" class="h-12 md:h-20  opacity-90">
                     
                 </div>
             </div>
