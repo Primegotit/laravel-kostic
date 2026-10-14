@@ -18,6 +18,71 @@
         @endif
 
         <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
+
+        <style>
+            .banner-image {
+                position: absolute;
+                inset: 0;
+                background-size: cover;
+                background-position: 50% 40%;
+                background-repeat: no-repeat;
+                opacity: 0;
+                animation: bannerFade 36s infinite;
+            }
+
+            /* Background images */
+            .banner-image-1 {
+                background-image: url('/shop25.jpg');
+                animation-delay: 0s;
+            }
+
+            .banner-image-2 {
+                background-image: url('/shop20.jpg');
+                animation-delay: 6s;
+            }
+
+            .banner-image-3 {
+                background-image: url('/shop26.jpg');
+                animation-delay: 12s;
+            }
+
+            .banner-image-4 {
+                background-image: url('/shop29.jpg');
+                animation-delay: 18s;
+            }
+
+            .banner-image-5 {
+                background-image: url('/shop28.jpg');
+                animation-delay: 24s;
+            }
+
+            .banner-image-6 {
+                background-image: url('/shop9.jpg');
+                animation-delay: 30s;
+            }
+
+            @keyframes bannerFade {
+                0% {
+                    opacity: 0;
+                }
+
+                4% {
+                    opacity: 1;
+                }
+
+                15% {
+                    opacity: 1;
+                }
+
+                19% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+            }
+        </style>
     </head>
 <body class="bg-gray-200 ">
  <header class="w-full h-16 bg-[#f77f00] flex flex-row p-1  items-center justify-between">
@@ -30,14 +95,7 @@
  
         <div class="flex flex-row gap-2 items-center justify-end  px-3">
             <div class="flex flex-row gap-2 items-center justify-center ">
-            <div class="relative">
-                <input
-                    type="search"
-                    placeholder="Search"
-                   class="p-1 pl-3 pr-8 rounded-full text-sm bg-gray-200  focus:outline-gray-500 focus:outline-2"
-                >
-                <i class="fa-solid fa-search absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
-            </div>
+
                 {{-- <button class="text-white font-bold rounded-lg px-3 py-1 hover:scale-105 transition duration-300 mr-9  border-2 border-gray-600 bg-gray-600 flex flex-row gap-3 items-center">Search </button> --}}
             </div>
             <p class="text-white font-bold hidden sm:block">{{ $currentUser->first_name ?? "" }}</p>
@@ -198,19 +256,49 @@
 
         <main class="  h-[calc(100vh-4rem)] col-span-13 ">
 
-            <div class=" text-sm overflow-auto  flex flex-col gap-4  shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3 ">
-            
-                <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.146),rgba(0, 0, 0, 0.531)) ,url('{{ asset('shop9.jpg') }}')" class=" p-4  bg-black/70 relative h-70 bg-cover bg-[position:50%_20%]  px-3 py-3  rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row   gap-2 ">
-                    <div class="relative flex justify-between p-2 items-end h-full ">
-                    <div class="  ">
-                    <h2 class="text-gray-100 text-shadow-lg text-shadow-gray-800 text-2xl md:text-5xl font-extrabold">KOSTIC</h2>
-                    <p class="text-orange-400 text-base md:text-2xl">Make a purchase online</p>
-                    </div>
-                    <img src="{{ asset('logo7.png') }}" alt="" class="h-12 md:h-20  opacity-90">
-                    
-                </div>
+
+<div class="text-sm overflow-auto flex flex-col gap-4 shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3">
+
+    <!-- Banner container: original styling preserved -->
+    <div
+        class="p-4 bg-black/70 relative h-70 bg-cover bg-[position:50%_40%] px-3 py-3 rounded-lg shadow-lg-flex md:flex-col flex-col lg:flex-row gap-2 overflow-hidden"
+    >
+
+        <!-- Background image layers -->
+        <div class="absolute inset-0 banner-image banner-image-1"></div>
+        <div class="absolute inset-0 banner-image banner-image-2"></div>
+        <div class="absolute inset-0 banner-image banner-image-3"></div>
+        <div class="absolute inset-0 banner-image banner-image-4"></div>
+        <div class="absolute inset-0 banner-image banner-image-5"></div>
+        <div class="absolute inset-0 banner-image banner-image-6"></div>
+
+        <!-- Dark overlay: preserves your original gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/15 to-black/55"></div>
+
+        <!-- Original banner content -->
+        <div class="relative z-10 flex justify-between p-2 items-end h-full">
+
+            <div>
+                <h2 class="text-gray-100 text-2xl md:text-5xl font-extrabold">
+                    KOSTIC
+                </h2>
+
+                <p class="text-orange-400 text-base md:text-2xl">
+                    Make a purchase online
+                </p>
             </div>
 
+            <img
+                src="{{ asset('logo7.png') }}"
+                alt=""
+                class="h-12 md:h-20 opacity-90"
+            >
+
+        </div>
+
+    </div>
+
+</div>
 
             <!-- this is for the table container -->
             
